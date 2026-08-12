@@ -66,19 +66,23 @@ npm run verify:du-lieu # chỉ phần dữ liệu, nhanh, không cần build
 | `verify:chi-tieu` | Overlay phủ đúng tập mã, mọi tham chiếu tồn tại, 4 chỉ tiêu bối cảnh không bị đổi kiểu, chỉ tiêu gắn ngưỡng chưa duyệt bắt buộc có cảnh báo | 11 ca dương + 1 ca âm |
 | `verify:nguong` | **Fail-closed theo từng điều**: mọi tỷ lệ trong thân Quy định phải được một mục nhận cho đúng điều đó; trích dẫn phải có thật trong văn bản | 11 ca dương + 1 ca âm |
 | `verify:cham-diem` | 5 công thức, ca chia 0, trần 100, trừ điểm hai phía, luật cổng chặn, ranh giới xếp loại | 60 phép kiểm |
-| `verify:links` | Chạy trên HTML đã dựng: 2040 liên kết, 185 neo `#dieu-*`, 247 tài nguyên tĩnh | 2 ca dương + 1 ca âm |
-| `verify:ui` | Dựng trang thật trong Chromium, chụp ảnh vào `shots/`, đo ở 390px và 1280px | 185 phép, gồm 5 phép kiểm núm bấm **tính lại thật** |
+| `verify:links` | Chạy trên HTML đã dựng: 1234 liên kết, 185 neo `#dieu-*`, 247 tài nguyên tĩnh. Thêm hai chiều: mọi mục menu phải có route, mọi trang phải có lối vào trong menu | 2 ca dương + 1 ca âm |
+| `verify:ui` | Dựng trang thật trong Chromium, chụp ảnh vào `shots/`, đo ở 390px và 1280px; bắt lỗi JS của trang; mở từng menu và kiểm tương phản chữ | 209 phép, gồm 5 phép kiểm núm bấm **tính lại thật** |
 
 Mỗi cổng đều có ca đối chứng: cố tình làm hỏng dữ liệu rồi xác nhận cổng bắt được, và xác nhận bản
 nguyên vẹn không báo động giả. Một cổng luôn PASS thì vô dụng, và nó trông y hệt một cổng tốt.
 
-Ba lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
+Năm lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
 
 1. Trích dẫn Điều 10 khoản 4 bị cắt ngắn so với nguyên văn.
 2. Phép phủ ngưỡng ban đầu đếm con số rời khỏi ngữ cảnh: xoá hẳn mục 70% - 85% của Điều 17 mà cổng
    vẫn báo sạch, vì "70" được mục 60% - 70% của Điều 10 nhận hộ. Phải neo theo từng điều.
 3. Quy tắc bắt buộc có cảnh báo ban đầu chỉ dò trong Phụ lục I, để lọt A03 vì lệnh cấm của nó nằm ở
    thân Điều 17 khoản 3.
+4. Cổng UI thiếu phép bắt lỗi JS nên khi thư mục `.next` hỏng, nó báo 11 phép đo tương tác hỏng rời
+   rạc thay vì chỉ thẳng ra nguyên nhân. Nay mọi lỗi JS và mọi tài nguyên trả 500 đều bị bắt.
+5. Vài phép đo chờ theo đồng hồ (`waitForTimeout`) thay vì chờ theo điều kiện, nên báo lỗi giả khi
+   máy chậm. Đã đổi sang `waitFor`.
 
 ## Bản đồ route
 

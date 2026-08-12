@@ -12,8 +12,8 @@
     "verify:chi-tieu": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-chi-tieu.mjs --self-test",
     "verify:nguong": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-nguong.mjs --self-test",
     "verify:cham-diem": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-cham-diem.mjs",
-    "verify:links": "node scripts/check-links.mjs --self-test",
-    "verify:ui": "node scripts/check-ui.mjs",
+    "verify:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-links.mjs --self-test",
+    "verify:ui": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-ui.mjs",
     "verify:du-lieu": "npm run verify:toanvan && npm run verify:chi-tieu && npm run verify:nguong && npm run verify:cham-diem",
     "check": "npm run verify:du-lieu && npm run build && npm run verify:links && npm run verify:ui"
   },

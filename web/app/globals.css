@@ -96,6 +96,37 @@ body {
 .nav-link:hover { background: rgba(255, 255, 255, 0.16); }
 .nav-link[data-dang="1"] { background: rgba(255, 255, 255, 0.24); font-weight: 600; }
 
+/* Menu thả xuống nằm trên nền trắng chứ không trên nền maroon: chữ maroon trên
+   maroon là chỗ tương phản dễ hỏng nhất, và ở đây cần đọc được cả tên mục lẫn
+   dòng mô tả xám bên dưới. */
+.menu-tha {
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line-dam);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 26px rgba(14, 40, 65, 0.22);
+  overflow: hidden;
+}
+
+.menu-muc {
+  display: block;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.menu-tha .menu-muc:last-child { border-bottom: 0; }
+.menu-muc:hover { background: var(--brand-soft); }
+.menu-muc[data-dang="1"] {
+  background: var(--brand-soft);
+  box-shadow: inset 3px 0 0 var(--brand);
+}
+.menu-muc[data-dang="1"] > span:first-child { color: var(--brand); }
+
+/* Trong header, thẻ a mặc định là chữ trắng. Menu thả xuống nằm trên nền trắng
+   nên phải trả màu chữ về mực, nếu không toàn bộ menu sẽ trắng trên trắng. */
+.site-header .menu-tha a { color: var(--ink); }
+
 .site-footer {
   background: var(--navy);
   color: #cfd8e3;

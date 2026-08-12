@@ -11,6 +11,7 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve, join } from 'node:path'
+import { MOI_DUONG, NHOM_NAV } from '../components/dieu-huong.ts'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const goc = resolve(here, '..')
@@ -103,6 +104,35 @@ for (const t of trang) {
         loi.push(`${route}: liên kết "${duong}${neo}" nhưng trang đích không có id="${id}"`)
       }
     }
+  }
+}
+
+/* ------------------------ menu phủ hết trang ------------------------ */
+
+// Mỗi mục trong menu phải trỏ tới route có thật.
+for (const d of MOI_DUONG) {
+  if (!coThat.has(d)) loi.push(`Menu điều hướng có mục "${d}" nhưng bản dựng không có route đó`)
+}
+
+// Và ngược lại: mỗi trang nội dung phải nằm trong menu, nếu không nó thành trang
+// mồ côi chỉ tới được bằng cách gõ tay đường dẫn. Miễn trang chủ (vào bằng logo)
+// và các trang chi tiết chỉ tiêu (vào từ bảng ở /chi-tieu).
+const MIEN = (r) => r === '/' || r.startsWith('/_') || r.startsWith('/chi-tieu/')
+const trongMenu = new Set(MOI_DUONG)
+for (const r of coThat) {
+  if (!MIEN(r) && !trongMenu.has(r)) {
+    loi.push(`Route "${r}" có trong bản dựng nhưng không có lối vào nào trong menu điều hướng`)
+  }
+}
+
+// Mỗi nhóm phải có mục, và không mục nào nằm ở hai nhóm.
+const daGap = new Set()
+for (const n of NHOM_NAV) {
+  if (n.muc.length === 0) loi.push(`Nhóm menu "${n.ten}" rỗng`)
+  for (const m of n.muc) {
+    if (daGap.has(m.href)) loi.push(`Mục "${m.href}" xuất hiện ở nhiều nhóm menu`)
+    daGap.add(m.href)
+    if (!m.mo || m.mo.length < 10) loi.push(`Mục menu "${m.href}" thiếu dòng mô tả`)
   }
 }
 

@@ -19,6 +19,7 @@ import { mkdirSync, rmSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import { chromium } from 'playwright'
+import { NHOM_NAV } from '../components/dieu-huong.ts'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const goc = resolve(here, '..')
@@ -49,6 +50,22 @@ let dat = 0
 const kiem = (ten, ok, chiTiet = '') => {
   if (ok) dat++
   else loi.push(`${ten}${chiTiet ? ` — ${chiTiet}` : ''}`)
+}
+
+/**
+ * Lấy khung nội dung bên trong iframe và CHỜ nó thật sự dựng xong.
+ *
+ * `page.frames()[1]` trả về đối tượng khung ngay khi thẻ iframe có mặt, kể cả
+ * lúc bên trong còn là about:blank. Đo trên khung đó cho ra số rỗng trông hệt
+ * số sạch, và tệ hơn là hỏng lúc có lúc không tuỳ tốc độ máy.
+ */
+async function khungTrongIframe(trang) {
+  await trang.locator('iframe').waitFor({ state: 'attached', timeout: 15000 })
+  const khung = trang.frames()[1]
+  if (!khung) return null
+  await khung.waitForLoadState('domcontentloaded')
+  await khung.locator('.site-header').waitFor({ state: 'visible', timeout: 15000 })
+  return khung
 }
 
 /* ------------------------------ dựng máy chủ ----------------------------- */
@@ -109,7 +126,7 @@ try {
         await trang.goto(GOC_URL + r, { waitUntil: 'networkidle' })
       }
 
-      const khung = rong < 504 ? trang.frames()[1] : trang.mainFrame()
+      const khung = rong < 504 ? await khungTrongIframe(trang) : trang.mainFrame()
       if (!khung) {
         kiem(`${r} @${rong} tải được`, false, 'không lấy được khung nội dung')
         continue
@@ -173,6 +190,16 @@ try {
   const p = await ctx.newPage()
   p.setDefaultTimeout(8000)
 
+  /* Bắt lỗi JS của trang. Thiếu phép này thì một trang hỏng hoàn toàn phần
+     tương tác vẫn chụp ảnh đẹp như thường, và mọi phép đo bố cục vẫn PASS.
+     Lỗi hydrate làm chết TOÀN BỘ thành phần client cùng lúc, nên nó phải được
+     báo thẳng chứ không để lộ ra gián tiếp qua chục phép đo hỏng khó hiểu. */
+  const loiJS = []
+  p.on('pageerror', (e) => loiJS.push(String(e).split('\n')[0]))
+  p.on('console', (m) => {
+    if (m.type() === 'error') loiJS.push('console.error: ' + m.text().slice(0, 200))
+  })
+
   // a) Máy chấm điểm: đổi giá trị thực hiện thì điểm phải đổi theo.
   await p.goto(GOC_URL + '/cham-diem', { waitUntil: 'networkidle' })
   const oTH = p.locator('input[type="number"]').first()
@@ -221,7 +248,139 @@ try {
   const co100 = await p.locator('text=/Kiểm tra toàn bộ/').count()
   kiem('ô tính cỡ mẫu chặn lấy mẫu ở nhóm rủi ro rất cao', co100 === 1, `đếm được ${co100}`)
 
+  /* ------------------------- menu thả xuống ------------------------- */
+
+  await p.goto(GOC_URL + '/', { waitUntil: 'networkidle' })
+
+  // Báo lỗi JS ngay tại đây, trước các phép đo tương tác, để nguyên nhân đứng
+  // trước hậu quả trong bảng kết quả.
+  kiem('trang không có lỗi JS', loiJS.length === 0, loiJS.slice(0, 3).join(' | '))
+
+  // Khi chưa bấm thì không menu nào bung sẵn.
+  kiem('menu đóng khi mới vào trang', (await p.locator('.menu-tha').count()) === 0)
+
+  for (const n of NHOM_NAV) {
+    const nut = p.getByRole('button', { name: new RegExp(`^${n.ten}`) })
+    await nut.click()
+
+    const bang = p.locator('.menu-tha').first()
+    // Chờ có điều kiện, không chờ theo đồng hồ. Chờ một số mili giây cố định là
+    // cách viết phép kiểm hỏng ngầm: máy chậm hơn thì phép kiểm báo lỗi giả, máy
+    // nhanh hơn thì nó đo trước khi giao diện kịp cập nhật.
+    try {
+      await bang.locator('a').first().waitFor({ state: 'visible', timeout: 5000 })
+    } catch {
+      kiem(`menu "${n.ten}" mở được`, false, 'bấm nút xong menu không hiện')
+      continue
+    }
+
+    const soMuc = await bang.locator('a').count()
+    kiem(`menu "${n.ten}" mở ra đủ ${n.muc.length} mục`, soMuc === n.muc.length, `đếm được ${soMuc}`)
+
+    // Chữ trong menu phải đọc được. Menu nằm trên nền trắng còn header đặt màu
+    // chữ trắng cho mọi thẻ a, nên đây đúng là chỗ dễ thành trắng trên trắng.
+    const mau = await bang.locator('a').first().evaluate((e) => {
+      const s = getComputedStyle(e)
+      const n = getComputedStyle(e.closest('.menu-tha'))
+      return { chu: s.color, nen: n.backgroundColor }
+    })
+    kiem(
+      `menu "${n.ten}" chữ đọc được trên nền menu`,
+      mau.chu !== mau.nen && !mau.chu.includes('255, 255, 255'),
+      `chữ ${mau.chu} trên nền ${mau.nen}`,
+    )
+
+    // Chỉ một menu mở tại một thời điểm.
+    kiem(`menu "${n.ten}" không mở chồng menu khác`, (await p.locator('.menu-tha').count()) === 1)
+
+    // Đóng lại trước khi thử nhóm kế tiếp.
+    await p.keyboard.press('Escape')
+    let daDong = false
+    try {
+      await p.locator('.menu-tha').waitFor({ state: 'detached', timeout: 3000 })
+      daDong = true
+    } catch {}
+    kiem(`menu "${n.ten}" đóng được bằng phím Esc`, daDong)
+  }
+
+  // Bấm một mục thật sự chuyển trang.
+  // Cổng không được sập vì một phép đo hỏng: sập thì mọi phép đo sau nó không
+  // chạy, và bảng kết quả thiếu dòng trông giống hệt bảng kết quả sạch.
+  try {
+    await p.getByRole('button', { name: /^Thước đo/ }).click()
+    await p.locator('.menu-tha a[href="/nguong"]').waitFor({ state: 'visible', timeout: 5000 })
+    await p.screenshot({ path: resolve(anh, 'menu-mo-1280.png') })
+    await p.locator('.menu-tha a[href="/nguong"]').click()
+    await p.waitForURL('**/nguong', { timeout: 5000 })
+    kiem('bấm mục trong menu thì chuyển trang', p.url().endsWith('/nguong'))
+
+    // Chờ có điều kiện. waitForURL trả về ngay khi đường dẫn đổi, còn React chạy
+    // effect đóng menu ở lượt dựng sau đó, nên đếm ngay lúc này là đo trước khi
+    // giao diện kịp cập nhật chứ không phải menu bị treo lại.
+    let daDongSauChuyenTrang = false
+    try {
+      await p.locator('.menu-tha').waitFor({ state: 'detached', timeout: 3000 })
+      daDongSauChuyenTrang = true
+    } catch {}
+    kiem('sang trang mới thì menu đã đóng', daDongSauChuyenTrang)
+  } catch (e) {
+    await p.screenshot({ path: resolve(anh, 'LOI-menu-1280.png'), fullPage: true })
+    kiem('bấm mục trong menu thì chuyển trang', false, `${String(e).split('\n')[0]} (ảnh: shots/LOI-menu-1280.png)`)
+  }
+
   await ctx.close()
+
+  /* -------------------- menu trên màn hẹp 390px -------------------- */
+
+  const ctxHep = await trinhDuyet.newContext({ viewport: { width: 900, height: 900 } })
+  const ph = await ctxHep.newPage()
+  ph.setDefaultTimeout(8000)
+  await ph.setContent(
+    `<body style="margin:0"><iframe src="${GOC_URL}/" style="width:390px;height:900px;border:0"></iframe></body>`,
+  )
+  await ph.waitForLoadState('networkidle')
+  const khungHep = await khungTrongIframe(ph)
+
+  // Ở màn hẹp, 4 nút nhóm phải ẩn, thay bằng một nút Mục lục.
+  // Đếm cả nút ẩn lẫn nút hiện, vì "0 nút hiện" một mình là phép đo rỗng: nó
+  // cũng đúng khi cả thanh điều hướng biến mất, tức là đúng lúc cần báo lỗi.
+  const nutNhomTong = await khungHep.locator('nav[aria-label="Điều hướng chính"] > div > button').count()
+  const nutNhomHien = await khungHep.locator('nav[aria-label="Điều hướng chính"] > div > button:visible').count()
+  kiem('màn 390px vẫn có đủ 4 nút nhóm trong DOM', nutNhomTong === NHOM_NAV.length, `đếm được ${nutNhomTong}`)
+  kiem('màn 390px ẩn 4 nút nhóm', nutNhomHien === 0, `còn hiện ${nutNhomHien}`)
+
+  const tongMuc = NHOM_NAV.reduce((s, n) => s + n.muc.length, 0)
+  try {
+    await khungHep.getByRole('button', { name: /Mục lục/ }).click({ timeout: 6000 })
+    await khungHep.locator('.menu-tha a').first().waitFor({ state: 'visible', timeout: 6000 })
+    const soMucHep = await khungHep.locator('.menu-tha a').count()
+    kiem(`màn 390px mở ra đủ ${tongMuc} mục`, soMucHep === tongMuc, `đếm được ${soMucHep}`)
+
+    const tranHep = await khungHep.evaluate(() => {
+      const d = document.documentElement
+      return { cuon: d.scrollWidth, khung: d.clientWidth }
+    })
+    kiem(
+      'màn 390px menu mở không làm tràn ngang',
+      tranHep.cuon <= tranHep.khung + 2,
+      `scrollWidth ${tranHep.cuon} > clientWidth ${tranHep.khung}`,
+    )
+    await ph.screenshot({ path: resolve(anh, 'menu-mo-390.png') })
+  } catch (e) {
+    // Không để cổng sập vì một phép đo: sập thì các phép sau không chạy, và bảng
+    // kết quả thiếu dòng trông giống hệt bảng kết quả sạch. In ra đúng thứ nó
+    // nhìn thấy để lần sau khỏi phải đoán.
+    const nut = await khungHep.locator('button').allInnerTexts().catch(() => [])
+    const hien = await khungHep.locator('button:visible').allInnerTexts().catch(() => [])
+    await ph.screenshot({ path: resolve(anh, 'LOI-menu-390.png') })
+    kiem(
+      `màn 390px mở ra đủ ${tongMuc} mục`,
+      false,
+      `${String(e).split('\n')[0]}; nút trong DOM: ${JSON.stringify(nut)}; nút đang hiện: ${JSON.stringify(hien)} (ảnh: shots/LOI-menu-390.png)`,
+    )
+  }
+
+  await ctxHep.close()
 } finally {
   await trinhDuyet.close()
   dietCayTienTrinh(server)
