@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* Bảng màu chính thức của Trường Đại học Kiến trúc Đà Nẵng.
+   Lấy nguyên ba mã từ template slide LaTeX của Trường và web quy trình đào tạo
+   đang chạy, không pha màu mới, để slide, bản in và web cùng một bộ nhận diện. */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --surface-2: #eef0f4;
+  --line: #e3e6ec;
+  --line-dam: #cfd4dd;
+  --ink: #14181f;
+  --muted: #5b6472;
+
+  --brand: #990000;          /* maroon DAU */
+  --brand-dark: #7a0000;
+  --brand-darkest: #5c0000;
+  --brand-soft: #fbecec;
+  --gold: #fbae40;           /* dải nhấn dưới header */
+  --navy: #0e2841;           /* nền chân trang */
+
+  /* Khối thông tin dùng navy, màu thứ ba của bộ nhận diện. Không dùng brand-soft
+     cho khối info vì đỏ nhạt gần trùng đỏ cảnh báo, một ghi chú bình thường sẽ
+     trông y hệt cảnh báo. */
+  --info: #1f4e79;
+  --info-soft: #eef3f8;
+  --ok: #15803d;
+  --ok-soft: #eefaf1;
+  --warn: #a16207;
+  --warn-soft: #fdf6e3;
+  --err: #b91c1c;
+  --err-soft: #fdf0ef;
+  --xam: #64748b;
+  --xam-soft: #f1f5f9;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-line: var(--line);
+  --color-linedam: var(--line-dam);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-branddark: var(--brand-dark);
+  --color-brandsoft: var(--brand-soft);
+  --color-gold: var(--gold);
+  --color-navy: var(--navy);
+  --color-info: var(--info);
+  --color-infosoft: var(--info-soft);
+  --color-ok: var(--ok);
+  --color-oksoft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warnsoft: var(--warn-soft);
+  --color-err: var(--err);
+  --color-errsoft: var(--err-soft);
+  --color-xam: var(--xam);
+  --color-xamsoft: var(--xam-soft);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  /* Neo #dieu-17 không bị header dính che mất. */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+  font-family: var(--font-noto), 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   Đầu trang và chân trang theo ngôn ngữ thị giác của slide DAU: khối maroon,
+   dải gold mỏng ngay dưới, chân trang nền navy.
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-dark) 100%);
+  border-bottom: 3px solid var(--gold);
+  color: #fff;
+}
+.site-header a { color: #fff; text-decoration: none; }
+
+.nav-link {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.35rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.nav-link:hover { background: rgba(255, 255, 255, 0.16); }
+.nav-link[data-dang="1"] { background: rgba(255, 255, 255, 0.24); font-weight: 600; }
+
+.site-footer {
+  background: var(--navy);
+  color: #cfd8e3;
+  border-top: 3px solid var(--gold);
+}
+.site-footer a { color: #fff; }
+
+/* -------------------------------- khối chữ -------------------------------- */
+
+.tieu-de-chuong {
+  color: var(--brand);
+  border-bottom: 2px solid var(--gold);
+}
+
+.khoi {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--bg);
+}
+
+.khoi-nhan {
+  border-left: 4px solid var(--info);
+  background: var(--info-soft);
+}
+.khoi-canh-bao {
+  border-left: 4px solid var(--warn);
+  background: var(--warn-soft);
+}
+.khoi-cam {
+  border-left: 4px solid var(--err);
+  background: var(--err-soft);
+}
+.khoi-dat {
+  border-left: 4px solid var(--ok);
+  background: var(--ok-soft);
+}
+
+/* --------------------------------- bảng ---------------------------------- */
+
+/* Bảng rộng phải tự cuộn trong khung của nó, không được đẩy cả trang trượt ngang. */
+.bang-cuon {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+.bang {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.bang th {
+  background: var(--surface-2);
+  text-align: left;
+  font-weight: 600;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 2px solid var(--line-dam);
+  vertical-align: top;
+}
+.bang td {
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.bang tbody tr:hover { background: var(--surface); }
+.bang tbody tr:last-child td { border-bottom: 0; }
+
+/* --------------------------------- nhãn ---------------------------------- */
+
+.nhan {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.nhan-phaply { background: var(--err-soft); color: var(--err); border-color: #f0c9c6; }
+.nhan-quyche { background: var(--info-soft); color: var(--info); border-color: #c9dbec; }
+.nhan-chuaduyet { background: var(--xam-soft); color: var(--xam); border-color: #d6dee7; }
+.nhan-daduyet { background: var(--ok-soft); color: var(--ok); border-color: #c3e6cf; }
+.nhan-nhom { background: var(--brand-soft); color: var(--brand-darkest); border-color: #eccfcf; }
+.nhan-trung { background: var(--surface-2); color: var(--muted); border-color: var(--line-dam); }
+
+/* --------------------------------- form ---------------------------------- */
+
+.o-nhap {
+  border: 1px solid var(--line-dam);
+  border-radius: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--ink);
+  width: 100%;
+}
+.o-nhap:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+}
+
+/* ---------------------------------- in ----------------------------------- */
+
+@media print {
+  .khong-in { display: none !important; }
+  body { font-size: 11.5pt; background: #fff; }
+  .site-header, .site-footer { display: none; }
+  .bang-cuon { overflow: visible; border: 0; }
+  .bang { font-size: 10pt; }
+  .bang th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .khoi { break-inside: avoid; }
+  .ngat-trang { break-before: page; }
+}
+
+/* Thanh mục lục dính chỉ dính khi màn đủ cao, tránh khoá cuộn trên điện thoại. */
+@media (min-width: 1024px) {
+  .muc-luc-dinh {
+    position: sticky;
+    top: 4.5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+  }
+}

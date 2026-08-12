@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "toanvan": "node scripts/gen-toanvan.mjs",
+    "verify:toanvan": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-toanvan.mjs --self-test",
+    "verify:chi-tieu": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-chi-tieu.mjs --self-test",
+    "verify:nguong": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-nguong.mjs --self-test",
+    "verify:cham-diem": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-cham-diem.mjs",
+    "verify:links": "node scripts/check-links.mjs --self-test",
+    "verify:ui": "node scripts/check-ui.mjs",
+    "verify:du-lieu": "npm run verify:toanvan && npm run verify:chi-tieu && npm run verify:nguong && npm run verify:cham-diem",
+    "check": "npm run verify:du-lieu && npm run build && npm run verify:links && npm run verify:ui"
+  },
+  "dependencies": {
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "playwright": "^1.62.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,1850 @@
+{
+  "meta": {
+    "tenVanBan": "Quy định về tiêu chí và quy trình đánh giá hiệu quả dự án đầu tư và hiệu quả khai thác, sử dụng tài sản, cơ sở vật chất, trang thiết bị dạy học, trang thiết bị công nghệ thông tin, hạ tầng kỹ thuật và hạ tầng số",
+    "coQuan": "Trường Đại học Kiến trúc Đà Nẵng",
+    "nguon": "nguon/quy-dinh-danh-gia-hieu-qua-dau-tu-va-su-dung-tai-san-DAU.docx",
+    "soKhoiGoc": 276
+  },
+  "quyetDinh": {
+    "header": [
+      [
+        "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KIẾN TRÚC ĐÀ NẴNG",
+        "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc"
+      ],
+      [
+        "Số: .../QĐ-ĐHKTĐN",
+        "Đà Nẵng, ngày ... tháng ... năm ..."
+      ]
+    ],
+    "tieuDe": [
+      "Ban hành Quy định về tiêu chí và quy trình đánh giá hiệu quả dự án đầu tư",
+      "và hiệu quả khai thác, sử dụng tài sản, cơ sở vật chất, trang thiết bị dạy học,",
+      "trang thiết bị công nghệ thông tin, hạ tầng kỹ thuật và hạ tầng số",
+      "HIỆU TRƯỞNG TRƯỜNG ĐẠI HỌC KIẾN TRÚC ĐÀ NẴNG"
+    ],
+    "canCu": [
+      "Căn cứ Quyết định số 270/2006/QĐ-TTg ngày 27 tháng 11 năm 2006 của Thủ tướng Chính phủ về việc thành lập Trường Đại học Kiến trúc Đà Nẵng;",
+      "Căn cứ Luật Giáo dục đại học số 125/2025/QH15 ngày 10 tháng 12 năm 2025;",
+      "Căn cứ Luật Đầu tư công số 58/2024/QH15 và pháp luật hiện hành về đầu tư, giám sát, đánh giá đầu tư đối với dự án thuộc phạm vi áp dụng;",
+      "Căn cứ Luật Quản lý, sử dụng tài sản công số 15/2017/QH14; Nghị định số 186/2025/NĐ-CP ngày 01 tháng 7 năm 2025 của Chính phủ và Thông tư số 141/2025/TT-BTC ngày 31 tháng 12 năm 2025 của Bộ trưởng Bộ Tài chính đối với tài sản thuộc phạm vi điều chỉnh;",
+      "Căn cứ Luật Xây dựng số 135/2025/QH15 ngày 10 tháng 12 năm 2025; Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ số 55/2024/QH15 ngày 29 tháng 11 năm 2024; Luật Bảo vệ môi trường số 72/2020/QH14 ngày 17 tháng 11 năm 2020;",
+      "Căn cứ Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 ngày 26 tháng 6 năm 2025; Nghị định số 356/2025/NĐ-CP ngày 31 tháng 12 năm 2025 của Chính phủ; Luật An ninh mạng số 116/2025/QH15 ngày 10 tháng 12 năm 2025;",
+      "Căn cứ Nghị định số 19/2026/NĐ-CP ngày 14 tháng 01 năm 2026 của Chính phủ quy định về trình tự, thủ tục thẩm định dự án quan trọng quốc gia và giám sát, đánh giá đầu tư;",
+      "Căn cứ Thông tư số 01/2024/TT-BGDĐT ngày 05 tháng 02 năm 2024 của Bộ trưởng Bộ Giáo dục và Đào tạo ban hành Chuẩn cơ sở giáo dục đại học;",
+      "Căn cứ Thông tư số 09/2024/TT-BGDĐT ngày 03 tháng 6 năm 2024 của Bộ trưởng Bộ Giáo dục và Đào tạo quy định về công khai trong hoạt động của các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân;",
+      "Căn cứ Thông tư số 20/2026/TT-BGDĐT ngày 31 tháng 3 năm 2026 của Bộ trưởng Bộ Giáo dục và Đào tạo quy định về kiểm định chất lượng cơ sở giáo dục đại học;",
+      "Căn cứ Thông tư số 49/2026/TT-BGDĐT ngày 30 tháng 6 năm 2026 của Bộ trưởng Bộ Giáo dục và Đào tạo quy định ứng dụng công nghệ trong giáo dục đại học, giáo dục nghề nghiệp;",
+      "Căn cứ Quy chế tổ chức và hoạt động, Quy chế tài chính và các quy định nội bộ hiện hành của Trường Đại học Kiến trúc Đà Nẵng;"
+    ],
+    "deNghi": "Theo đề nghị của Trưởng phòng Quản lý dự án và Quản trị thiết bị.",
+    "dieu": [
+      {
+        "so": 1,
+        "text": "Điều 1. Ban hành kèm theo Quyết định này Quy định về tiêu chí và quy trình đánh giá hiệu quả dự án đầu tư và hiệu quả khai thác, sử dụng tài sản, cơ sở vật chất, trang thiết bị dạy học, trang thiết bị công nghệ thông tin, hạ tầng kỹ thuật và hạ tầng số của Trường Đại học Kiến trúc Đà Nẵng."
+      },
+      {
+        "so": 2,
+        "text": "Điều 2. Phòng Quản lý dự án và Quản trị thiết bị là đơn vị đầu mối, phối hợp với Phòng Kế hoạch - Tài chính, bộ phận phụ trách công nghệ thông tin, đơn vị bảo đảm chất lượng, các khoa, phòng, ban, trung tâm và đơn vị có liên quan tổ chức thực hiện Quy định này."
+      },
+      {
+        "so": 3,
+        "text": "Điều 3. Quyết định này có hiệu lực kể từ ngày ký. Các nội dung thực hiện Thông tư số 49/2026/TT-BGDĐT được áp dụng từ ngày 15 tháng 8 năm 2026; trường hợp Quyết định được ký sau thời điểm này thì áp dụng kể từ ngày ký."
+      },
+      {
+        "so": 4,
+        "text": "Điều 4. Trưởng phòng Quản lý dự án và Quản trị thiết bị, Trưởng phòng Kế hoạch - Tài chính, người phụ trách công nghệ thông tin, Trưởng các đơn vị thuộc và trực thuộc Trường cùng các tổ chức, cá nhân có liên quan chịu trách nhiệm thi hành Quyết định này."
+      }
+    ],
+    "noiNhan": [
+      [
+        "BỘ GIÁO DỤC VÀ ĐÀO TẠO TRƯỜNG ĐẠI HỌC KIẾN TRÚC ĐÀ NẴNG",
+        "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc"
+      ]
+    ]
+  },
+  "quyDinh": {
+    "tieuDe": [
+      "Về tiêu chí và quy trình đánh giá hiệu quả dự án đầu tư",
+      "và hiệu quả khai thác, sử dụng tài sản, cơ sở vật chất,",
+      "trang thiết bị dạy học, trang thiết bị công nghệ thông tin,",
+      "hạ tầng kỹ thuật và hạ tầng số"
+    ],
+    "banHanhKem": "(Ban hành kèm theo Quyết định số .../QĐ-ĐHKTĐN ngày ... tháng ... năm 2026 của Hiệu trưởng Trường Đại học Kiến trúc Đà Nẵng)",
+    "chuong": [
+      {
+        "so": "I",
+        "stt": 1,
+        "ten": "QUY ĐỊNH CHUNG",
+        "dieu": [
+          {
+            "so": 1,
+            "ten": "Phạm vi điều chỉnh và đối tượng áp dụng",
+            "chuong": "I",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Quy định này quy định nguyên tắc, tiêu chí, dữ liệu, phương pháp, quy trình, thẩm quyền và trách nhiệm đánh giá hiệu quả dự án đầu tư; sức khỏe tài chính phục vụ quyết định đầu tư; hiệu quả khai thác, sử dụng tài sản, cơ sở vật chất, trang thiết bị dạy học, trang thiết bị công nghệ thông tin (CNTT), hạ tầng kỹ thuật, hạ tầng số, dữ liệu, phần mềm và nền tảng công nghệ của Trường Đại học Kiến trúc Đà Nẵng (sau đây gọi là Trường).",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Phạm vi tài sản và dịch vụ được đánh giá gồm:",
+                "diem": [
+                  {
+                    "ky": "a",
+                    "text": "a) Đất đai, khuôn viên, công trình xây dựng, giảng đường, phòng học, thư viện, ký túc xá, studio, xưởng thực hành, phòng thí nghiệm, phòng mô phỏng, không gian học tập và nghiên cứu;"
+                  },
+                  {
+                    "ky": "b",
+                    "text": "b) Hệ thống điện, nước, chiếu sáng, điều hòa, thông gió, thang máy, phòng cháy, chữa cháy và cứu nạn, cứu hộ, môi trường, an toàn, kiểm soát ra vào và các hạ tầng kỹ thuật khác;"
+                  },
+                  {
+                    "ky": "c",
+                    "text": "c) Máy móc, thiết bị, dụng cụ, mô hình, phương tiện và trang thiết bị phục vụ đào tạo, nghiên cứu khoa học, đổi mới sáng tạo, quản trị và dịch vụ người học;"
+                  },
+                  {
+                    "ky": "d",
+                    "text": "d) Máy tính, thiết bị mạng, máy chủ, trung tâm dữ liệu, lưu trữ, điện toán đám mây, phần mềm, cơ sở dữ liệu, học liệu số, hệ thống quản lý học tập (LMS), cổng thông tin điện tử, hệ thống hoạch định nguồn lực (ERP), nền tảng trí tuệ nhân tạo (AI) và các dịch vụ số khác."
+                  }
+                ]
+              },
+              {
+                "so": 3,
+                "text": "3. Quy định này áp dụng đối với các đơn vị thuộc, trực thuộc Trường; tổ chức, cá nhân quản lý, vận hành, sử dụng, cung cấp dữ liệu, thẩm định, kiểm tra hoặc ra quyết định liên quan đến tài sản và dự án thuộc phạm vi khoản 2 Điều này.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đối với tài sản công, tài sản do Nhà nước giao quản lý, dự án sử dụng vốn đầu tư công, dự án thuộc diện chấp thuận đầu tư hoặc đối tượng khác chịu chế độ pháp lý chuyên ngành, ngoài Quy định này phải thực hiện đầy đủ pháp luật tương ứng. Quy định này không thay thế thủ tục đầu tư, mua sắm, đấu thầu, nghiệm thu, kiểm kê, kế toán, thanh lý và báo cáo bắt buộc theo pháp luật.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 2,
+            "ten": "Mục đích",
+            "chuong": "I",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Cung cấp căn cứ có thể kiểm chứng cho việc đề xuất, lựa chọn, phê duyệt, triển khai, vận hành, nâng cấp, điều chuyển, thuê, thay thế hoặc chấm dứt dự án và tài sản.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Đánh giá mức độ đạt mục tiêu, lợi ích và kết quả đầu ra của dự án; mức sử dụng, độ sẵn sàng, tình trạng kỹ thuật, chi phí vòng đời, mức độ an toàn và sự hài lòng của người sử dụng.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Ngăn ngừa đầu tư dàn trải, đầu tư trùng lặp, sử dụng dưới công suất, quá tải, xuống cấp, thất thoát, lãng phí và rủi ro pháp lý, an toàn, an ninh mạng hoặc dữ liệu cá nhân.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Hình thành dữ liệu quản trị thống nhất, hỗ trợ bảo đảm chất lượng, kiểm định, công khai, cải tiến liên tục và thực hiện chiến lược phát triển của Trường.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 3,
+            "ten": "Nguyên tắc đánh giá",
+            "chuong": "I",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Tuân thủ pháp luật là điều kiện tiên quyết. Tài sản hoặc dự án vi phạm điều kiện bắt buộc về thẩm quyền, quyền sở hữu, xây dựng, nghiệm thu, phòng cháy, chữa cháy, môi trường, an toàn, khả năng tiếp cận, bản quyền, an ninh mạng hoặc dữ liệu cá nhân không được xếp loại hiệu quả chỉ vì có mức sử dụng cao.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tách biệt ba lớp đánh giá: sức khỏe tài chính của Trường; hiệu quả của từng dự án đầu tư; hiệu quả khai thác, sử dụng từng tài sản, nhóm tài sản hoặc dịch vụ.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đánh giá theo vòng đời, trên cơ sở tổng chi phí sở hữu, lợi ích thực hiện, chất lượng đầu ra và rủi ro; không đồng nhất tiết kiệm chi phí với hiệu quả nếu làm giảm chất lượng đào tạo, nghiên cứu, dịch vụ, an toàn hoặc tính bền vững.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Dữ liệu phải có nguồn, kỳ đo, chủ sở hữu, phương pháp, bằng chứng và khả năng tái kiểm tra; chỉ tiêu và trọng số phải được phê duyệt trước kỳ đánh giá.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Kết hợp số liệu định lượng, bằng chứng định tính, đối sánh theo thời gian và đối sánh phù hợp; không kết luận quan hệ nhân quả chỉ từ tương quan thống kê.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Áp dụng nguyên tắc trọng yếu và rủi ro; bảo đảm độc lập tương đối giữa đơn vị quản lý tài sản, đơn vị cung cấp dữ liệu và đơn vị xác nhận kết quả.",
+                "diem": []
+              },
+              {
+                "so": 7,
+                "text": "7. Bảo vệ dữ liệu cá nhân, bí mật kinh doanh, thông tin an ninh và quyền lợi chính đáng của người học, giảng viên, người lao động trong toàn bộ quá trình đánh giá.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 4,
+            "ten": "Giải thích từ ngữ",
+            "chuong": "I",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Dự án đầu tư là tập hợp đề xuất và hoạt động có liên quan nhằm bỏ vốn để tạo mới, mở rộng, nâng cấp, thay thế hoặc thuê tài sản, công trình, hệ thống hay dịch vụ nhằm đạt mục tiêu xác định trong thời gian và nguồn lực nhất định.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Hiệu quả dự án đầu tư là mức độ đạt mục tiêu, lợi ích và kết quả đã phê duyệt so với chi phí vòng đời, thời gian, chất lượng và rủi ro của dự án.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Hiệu quả sử dụng tài sản là mức độ tài sản tạo ra dịch vụ và kết quả mong đợi với công suất, độ sẵn sàng, chất lượng, chi phí và rủi ro phù hợp.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Tổng chi phí sở hữu (TCO) là toàn bộ chi phí trong vòng đời gồm chuẩn bị, mua sắm hoặc xây dựng, triển khai, tích hợp, vận hành, nhân lực, giấy phép, năng lượng, bảo trì, nâng cấp, ngừng sử dụng và xử lý cuối vòng đời.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Lợi ích thực hiện là phần kết quả hoặc giá trị thực tế đạt được so với lợi ích đã xác định và phê duyệt trước đầu tư.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Giờ khả dụng là thời gian tài sản hoặc không gian có thể được xếp lịch hợp pháp, an toàn và phù hợp chức năng, sau khi loại trừ thời gian bảo trì có kế hoạch và thời gian không thể sử dụng có căn cứ.",
+                "diem": []
+              },
+              {
+                "so": 7,
+                "text": "7. Người dùng đủ điều kiện là người được cấp quyền hoặc thuộc nhóm mục tiêu cần sử dụng hệ thống, không đồng nhất với tổng số người học và người lao động của Trường.",
+                "diem": []
+              },
+              {
+                "so": 8,
+                "text": "8. Hạ tầng số gồm hạ tầng CNTT, dữ liệu, phần mềm, nền tảng, dịch vụ đám mây, hệ thống trí tuệ nhân tạo, kết nối, định danh, an ninh mạng và các thành phần phục vụ hoạt động số của Trường.",
+                "diem": []
+              },
+              {
+                "so": 9,
+                "text": "9. Cổng tuân thủ là tập hợp điều kiện bắt buộc phải đạt trước khi chấm điểm và xếp loại hiệu quả.",
+                "diem": []
+              },
+              {
+                "so": 10,
+                "text": "10. Minh chứng là tài liệu, dữ liệu, nhật ký, hồ sơ điện tử hoặc vật chất có nguồn gốc, thời điểm, người chịu trách nhiệm và khả năng xác thực.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 5,
+            "ten": "Phân loại dự án và tài sản trước khi đánh giá",
+            "chuong": "I",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Mỗi dự án, tài sản hoặc nhóm tài sản phải được xác định tối thiểu theo: nguồn vốn; quyền sở hữu; đơn vị quản lý; đơn vị sử dụng; địa điểm; nguyên giá hoặc giá trị hợp đồng; ngày đưa vào sử dụng; thời gian sử dụng dự kiến; tình trạng kỹ thuật; nghĩa vụ pháp lý và dữ liệu có liên quan.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Phân loại theo quyền và nguồn hình thành gồm: tài sản thuộc sở hữu của Trường; tài sản công hoặc tài sản do Nhà nước giao; tài sản tài trợ, viện trợ, hiến tặng; tài sản thuê, thuê dịch vụ, mượn hoặc dùng chung; tài sản hợp tác, liên kết; tài sản vô hình, phần mềm, dữ liệu và quyền sử dụng.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Phân loại theo mức độ trọng yếu và rủi ro gồm:",
+                "diem": [
+                  {
+                    "ky": "a",
+                    "text": "a) Mức I - trọng yếu: dự án, tài sản giá trị lớn; công trình, phòng thí nghiệm hoặc hệ thống liên quan trực tiếp đến tính mạng, an toàn, dữ liệu cá nhân, an ninh mạng, hoạt động đào tạo cốt lõi hoặc uy tín của Trường;"
+                  },
+                  {
+                    "ky": "b",
+                    "text": "b) Mức II - quan trọng: tài sản có ảnh hưởng đáng kể đến nhiều đơn vị hoặc có chi phí, mức phụ thuộc và rủi ro trung bình;"
+                  },
+                  {
+                    "ky": "c",
+                    "text": "c) Mức III - thông thường: tài sản phổ biến, giá trị đơn chiếc thấp, dễ thay thế và rủi ro thấp."
+                  }
+                ]
+              },
+              {
+                "so": 4,
+                "text": "4. Ngưỡng giá trị và danh mục cụ thể cho từng mức do Hiệu trưởng hoặc cấp có thẩm quyền phê duyệt hằng năm theo Quy chế tài chính, Quy chế quản lý tài sản và mức độ rủi ro thực tế.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "II",
+        "stt": 2,
+        "ten": "CỔNG TUÂN THỦ, DỮ LIỆU, NGƯỠNG VÀ PHƯƠNG PHÁP ĐÁNH GIÁ",
+        "dieu": [
+          {
+            "so": 6,
+            "ten": "Cổng tuân thủ bắt buộc",
+            "chuong": "II",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Hồ sơ về thẩm quyền, nguồn vốn, quyền sở hữu hoặc quyền sử dụng, quyết định đầu tư, mua sắm, lựa chọn nhà cung cấp, hợp đồng, nghiệm thu, bàn giao, đăng ký và hạch toán.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Điều kiện về quy hoạch, xây dựng, chất lượng công trình, kiểm định, phòng cháy, chữa cháy và cứu nạn, cứu hộ, an toàn lao động, môi trường, tiếp cận cho người khuyết tật và các điều kiện chuyên ngành.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Điều kiện về bản quyền, giấy phép, tiêu chuẩn kỹ thuật, hiệu chuẩn, bảo hành, bảo trì, nguồn gốc thiết bị và quản lý chất thải, thiết bị điện, điện tử cuối vòng đời.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Điều kiện về an ninh mạng, phân quyền truy cập, ghi nhật ký, sao lưu, phục hồi, bảo vệ dữ liệu cá nhân, đánh giá tác động xử lý dữ liệu cá nhân khi thuộc trường hợp phải thực hiện.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Điều kiện đặc thù của phòng thí nghiệm, xưởng, studio, thư viện, học liệu số, hệ thống đào tạo trực tuyến, đánh giá người học, nghiên cứu khoa học và đổi mới sáng tạo.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Nếu có vi phạm nghiêm trọng hoặc chưa đủ bằng chứng về một điều kiện bắt buộc, Hội đồng đánh giá ghi trạng thái “Không đạt cổng tuân thủ” hoặc “Chưa đủ minh chứng”; không tính điểm tổng hợp để che lấp vi phạm. Báo cáo phải xác định biện pháp, người chịu trách nhiệm và thời hạn khắc phục.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 7,
+            "ten": "Quản trị dữ liệu và minh chứng",
+            "chuong": "II",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Mỗi chỉ tiêu phải có hồ sơ định nghĩa gồm: mã chỉ tiêu, mục đích, đối tượng, công thức, đơn vị tính, kỳ đo, nguồn dữ liệu gốc, chủ sở hữu dữ liệu, người xác nhận, giá trị cơ sở, mục tiêu, ngoại lệ, phương pháp chuẩn hóa và thời hạn lưu giữ.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Nguồn dữ liệu ưu tiên gồm: sổ tài sản và kế toán; hồ sơ đầu tư, hợp đồng, nghiệm thu; hệ thống quản lý bảo trì; lịch và nhật ký sử dụng; hệ thống giám sát kỹ thuật, mạng và an ninh; LMS, ERP, cổng dịch vụ; khảo sát có phương pháp; biên bản kiểm tra thực địa và bằng chứng số có khả năng truy xuất.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Dữ liệu phải được kiểm tra về tính đầy đủ, hợp lệ, nhất quán, đúng thời điểm, không trùng lặp và khả năng truy xuất. Dữ liệu do đơn vị được đánh giá cung cấp phải được đối soát với ít nhất một nguồn độc lập đối với chỉ tiêu trọng yếu.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Việc thu thập, xử lý, chia sẻ và lưu trữ dữ liệu cá nhân phải đúng mục đích, tối thiểu cần thiết, có kiểm soát truy cập và tuân thủ pháp luật. Báo cáo công khai phải được tổng hợp hoặc ẩn danh phù hợp.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 8,
+            "ten": "Thiết lập chuẩn, mục tiêu và ngưỡng đánh giá",
+            "chuong": "II",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Ngưỡng đánh giá được phân thành: ngưỡng pháp lý bắt buộc; mục tiêu chiến lược hoặc kế hoạch được phê duyệt; chuẩn dịch vụ hoặc thỏa thuận mức dịch vụ; giá trị cơ sở và đối sánh nội bộ; chuẩn hoặc thông lệ tham khảo.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Các tỷ lệ như tự cân đối thu - chi, thu ngoài học phí, chi đào tạo và nghiên cứu, tái đầu tư, mức sử dụng phòng, thời gian hoạt động hệ thống, tỷ lệ số hóa hoặc tỷ lệ người dùng hoạt động không mặc nhiên là chuẩn pháp lý. Các tỷ lệ này chỉ trở thành mục tiêu nội bộ khi được cấp có thẩm quyền phê duyệt kèm kỳ áp dụng, phạm vi, nguồn dữ liệu và cơ sở xác định.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mục tiêu phải được ban hành trước kỳ đo. Không điều chỉnh ngưỡng sau khi có kết quả, trừ trường hợp sửa sai dữ liệu hoặc có thay đổi khách quan được lập biên bản và phê duyệt.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Chỉ so sánh giữa đơn vị, ngành, địa điểm hoặc thời kỳ khi đã chuẩn hóa khác biệt về quy mô, lĩnh vực đào tạo, trình độ, thời gian hoạt động, công suất thiết kế, giá, lạm phát, thời tiết và điều kiện sử dụng.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 9,
+            "ten": "Chấm điểm và xếp loại",
+            "chuong": "II",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Việc chấm điểm được thực hiện sau cổng tuân thủ theo công thức tại Phụ lục II. Trọng số phải phù hợp từng loại dự án hoặc tài sản và được phê duyệt trong kế hoạch đánh giá trước khi thu thập kết quả.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Không sử dụng một chỉ tiêu đơn lẻ để kết luận hiệu quả. Điểm tổng hợp phải được đọc cùng điểm thành phần, xu hướng, tình trạng tuân thủ và mức độ tin cậy của dữ liệu.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Kết quả gồm các mức: Hiệu quả rất cao; Hiệu quả tốt; Đạt yêu cầu nhưng cần cải thiện; Hiệu quả thấp; Không hiệu quả; Không đạt cổng tuân thủ; Chưa đủ minh chứng.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đối với tài sản, ngoài điểm tổng hợp phải phân loại trên hai trục: mức sử dụng và tình trạng/phù hợp kỹ thuật. Một tài sản có thể đồng thời quá tải và lạc hậu hoặc sử dụng thấp nhưng vẫn cần duy trì do yêu cầu dự phòng, an toàn hoặc chiến lược.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "III",
+        "stt": 3,
+        "ten": "SỨC KHỎE TÀI CHÍNH VÀ HIỆU QUẢ DỰ ÁN ĐẦU TƯ",
+        "dieu": [
+          {
+            "so": 10,
+            "ten": "Chỉ số sức khỏe tài chính phục vụ quyết định đầu tư",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Nhóm chỉ số sức khỏe tài chính là thông tin bối cảnh phục vụ lập kế hoạch và kiểm soát khả năng chi trả; không được sử dụng thay cho đánh giá hiệu quả từng dự án.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Các chỉ số cơ bản gồm: tỷ lệ bao phủ chi hoạt động bằng nguồn thu hoạt động; cơ cấu và tính bền vững của nguồn thu; tỷ lệ chi cho đào tạo, nghiên cứu khoa học và đổi mới sáng tạo; cường độ tái đầu tư; chi phí đào tạo trên người học chính quy quy đổi; dự báo dòng tiền và nghĩa vụ tài chính vòng đời.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Khi tính chi phí trên người học phải chuẩn hóa tối thiểu theo trình độ, lĩnh vực hoặc ngành đào tạo, quy mô, địa điểm, hình thức tổ chức và biến động giá; phải đọc cùng kết quả đầu ra và chất lượng, không mặc nhiên coi chi phí thấp hơn là hiệu quả hơn.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Không áp dụng mặc định các ngưỡng 100%, 15% - 30%, 60% - 70% hoặc 10% - 15%. Nếu Trường lựa chọn các mức này, phải ghi rõ đó là mục tiêu nội bộ, có thuyết minh và được phê duyệt trong kế hoạch tài chính hoặc nghị quyết có thẩm quyền.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 11,
+            "ten": "Đánh giá dự án theo vòng đời",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Đề xuất và đánh giá trước đầu tư: xác định vấn đề, nhu cầu, giá trị cơ sở, đối tượng hưởng lợi, các phương án, tổng chi phí sở hữu, lợi ích, rủi ro, nguồn lực, khả năng vận hành và chỉ số thành công.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Theo dõi thực hiện: kiểm soát phạm vi, chi phí, tiến độ, chất lượng, thay đổi, rủi ro, hợp đồng và sự sẵn sàng đưa vào sử dụng.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đánh giá kết thúc: kiểm tra nghiệm thu, hồ sơ hoàn công hoặc bàn giao, đào tạo người sử dụng, dữ liệu tài sản, bảo hành, bảo trì, an toàn và mức sẵn sàng vận hành.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đánh giá sau đầu tư: thực hiện theo mốc phù hợp, thông thường tại 6 tháng, 12 tháng và 24 tháng đối với dự án trọng yếu, để đo mức sử dụng, lợi ích thực hiện, chi phí vòng đời và vấn đề phát sinh.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Đánh giá tác động hoặc đột xuất: thực hiện sau thời gian đủ để hình thành tác động hoặc khi có dấu hiệu thất thoát, kém hiệu quả, vi phạm, sự cố, thay đổi lớn về nhu cầu, công nghệ hoặc môi trường hoạt động.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Dự án thuộc phạm vi giám sát, đánh giá đầu tư theo pháp luật phải thực hiện đúng loại đánh giá, nội dung, biểu mẫu, thời hạn và chế độ báo cáo bắt buộc; quy trình nội bộ tại Điều này là lớp quản trị bổ sung, không thay thế nghĩa vụ pháp lý.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 12,
+            "ten": "Tiêu chí đánh giá trước đầu tư",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Mức độ phù hợp với chiến lược, sứ mạng, kế hoạch phát triển, chương trình đào tạo, nghiên cứu, bảo đảm chất lượng và nhu cầu người học.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Sự cần thiết dựa trên dữ liệu: tình trạng hiện có, dự báo nhu cầu, công suất, khoảng thiếu hụt, ý kiến bên sử dụng và hệ quả nếu không đầu tư.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. So sánh phương án: không đầu tư; tối ưu tài sản hiện có; điều chuyển hoặc dùng chung; sửa chữa, nâng cấp; mua mới; thuê, thuê dịch vụ, điện toán đám mây hoặc hợp tác.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Tổng chi phí sở hữu, khả năng bố trí vốn, dòng tiền, chi phí cơ hội, giá trị còn lại và chi phí chấm dứt hoặc chuyển đổi nhà cung cấp.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Lợi ích và kết quả dự kiến đối với đào tạo, học tập, nghiên cứu, đổi mới sáng tạo, quản trị, dịch vụ người học, an toàn, môi trường và danh tiếng.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Năng lực vận hành: nhân lực, quy trình, dữ liệu, tích hợp, bảo trì, vật tư, năng lượng, không gian, đào tạo người dùng và khả năng mở rộng.",
+                "diem": []
+              },
+              {
+                "so": 7,
+                "text": "7. Rủi ro pháp lý, kỹ thuật, an ninh mạng, dữ liệu cá nhân, khóa chặt nhà cung cấp, lỗi thời, phụ thuộc dịch vụ, môi trường và an toàn.",
+                "diem": []
+              },
+              {
+                "so": 8,
+                "text": "8. Chỉ sử dụng giá trị hiện tại thuần, tỷ suất hoàn vốn nội bộ hoặc thời gian hoàn vốn khi dự án có dòng tiền có thể xác định hợp lý. Đối với dự án phục vụ đào tạo, nghiên cứu, an toàn hoặc nghĩa vụ chất lượng, ưu tiên phân tích chi phí - hiệu quả, chi phí - lợi ích mở rộng và mức độ đạt kết quả công ích hoặc sứ mạng.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 13,
+            "ten": "Tiêu chí theo dõi thực hiện và đánh giá kết thúc",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Sai lệch chi phí so với mức được duyệt và nguyên nhân; phân biệt biến động hợp pháp, thay đổi phạm vi và vượt chi phí không được kiểm soát.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Sai lệch tiến độ, các mốc bàn giao, thời gian gián đoạn hoạt động và tác động đến đào tạo, nghiên cứu, quản trị.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mức hoàn thành phạm vi, chất lượng, tiêu chuẩn kỹ thuật, khả năng tích hợp, kiểm thử, nghiệm thu, khắc phục tồn tại và hồ sơ pháp lý.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Mức sẵn sàng vận hành: nhân lực, quy trình, hướng dẫn, đào tạo người dùng, bảo hành, bảo trì, dữ liệu, sao lưu, hỗ trợ và ngân sách vận hành.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Mức độ kiểm soát thay đổi, khiếu nại, phát sinh hợp đồng, rủi ro và bài học kinh nghiệm.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 14,
+            "ten": "Tiêu chí đánh giá sau đầu tư và đánh giá tác động",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Công suất sử dụng thực tế so với công suất thiết kế và kế hoạch; mức tiếp cận công bằng giữa các đơn vị và nhóm người dùng.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tỷ lệ lợi ích thực hiện; kết quả đào tạo, học tập, nghiên cứu, đổi mới sáng tạo, quản trị hoặc dịch vụ người học có bằng chứng liên quan.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Tổng chi phí sở hữu thực tế, chi phí trên đơn vị dịch vụ hoặc kết quả, chi phí tránh được, giá trị còn lại và nghĩa vụ tài chính tương lai.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Độ sẵn sàng, độ tin cậy, chất lượng dịch vụ, an toàn, mức hài lòng và tác động môi trường.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Mức độ phù hợp với nhu cầu hiện tại và tương lai; nguy cơ quá tải, dư thừa, lỗi thời, trùng lặp hoặc phụ thuộc nhà cung cấp.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Đối với phòng thí nghiệm, phải tách chức năng giảng dạy và nghiên cứu; đầu ra nghiên cứu được tính theo thời gian, mức đóng góp và độ trễ hợp lý, không cộng cơ học các bài báo, đề tài và sản phẩm có giá trị khác nhau.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 15,
+            "ten": "Kết luận và quyết định sau đánh giá dự án",
+            "chuong": "III",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Kết luận phải nêu rõ: mức tuân thủ; mức đạt mục tiêu; điểm và xếp loại; độ tin cậy của dữ liệu; nguyên nhân; rủi ro còn lại; bài học; khuyến nghị và trách nhiệm thực hiện.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Biện pháp có thể gồm: tiếp tục theo kế hoạch; tối ưu vận hành; điều chỉnh phạm vi; bổ sung năng lực; dùng chung hoặc điều chuyển; đàm phán, cơ cấu lại hợp đồng; tạm dừng; thu hồi; thay thế; chấm dứt hoặc thanh lý. Việc quyết định phải tuân thủ thẩm quyền và quy trình riêng, không được tự động thực hiện chỉ từ kết quả đánh giá.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "IV",
+        "stt": 4,
+        "ten": "TIÊU CHÍ HIỆU QUẢ KHAI THÁC, SỬ DỤNG CƠ SỞ VẬT CHẤT VÀ TRANG THIẾT BỊ",
+        "dieu": [
+          {
+            "so": 16,
+            "ten": "Nhóm chỉ tiêu chung về tài sản",
+            "chuong": "IV",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Độ chính xác của hồ sơ tài sản: mã, số sê-ri, vị trí, người quản lý, đơn vị sử dụng, nguồn vốn, nguyên giá, tình trạng và hồ sơ kèm theo.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tỷ lệ tài sản sẵn sàng sử dụng; thời gian ngừng ngoài kế hoạch; tần suất hỏng; thời gian sửa chữa và tỷ lệ phục hồi đúng hạn.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mức sử dụng theo thời gian, công suất hoặc số lượt; giá trị tài sản không sử dụng, sử dụng dưới ngưỡng hoặc quá tải.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Tình trạng kỹ thuật, mức phù hợp chức năng, tuổi đời, thời gian sử dụng còn lại, mức lỗi thời và nhu cầu thay thế.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Tỷ lệ hoàn thành bảo trì phòng ngừa, kiểm định, hiệu chuẩn; tồn đọng bảo trì; chi phí bảo trì và chi phí vòng đời.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Tổn thất, mất mát, sai lệch kiểm kê, vi phạm sử dụng; khả năng điều chuyển, dùng chung, thu hồi giá trị và xử lý cuối vòng đời.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 17,
+            "ten": "Phòng học, giảng đường và không gian học tập",
+            "chuong": "IV",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Mức sử dụng phải đo đồng thời:",
+                "diem": [
+                  {
+                    "ky": "a",
+                    "text": "a) Tỷ lệ sử dụng thời gian = Tổng giờ sử dụng thực tế/Tổng giờ khả dụng × 100%;"
+                  },
+                  {
+                    "ky": "b",
+                    "text": "b) Tỷ lệ lấp đầy chỗ ngồi = Tổng lượt chỗ ngồi thực tế/Tổng lượt chỗ ngồi khả dụng trong các giờ đã sử dụng × 100%;"
+                  },
+                  {
+                    "ky": "c",
+                    "text": "c) Tỷ lệ hủy, đổi phòng, xếp lịch chồng chéo, thời gian trống giữa các ca và mức sử dụng ngoài giờ cao điểm."
+                  }
+                ]
+              },
+              {
+                "so": 2,
+                "text": "2. Giờ khả dụng phải được quy định theo từng loại không gian, lịch đào tạo và yêu cầu an toàn; không tính thời gian không thể xếp lịch hoặc bảo trì có kế hoạch nếu có hồ sơ hợp lệ.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mức 70% - 85% chỉ được sử dụng khi Trường phê duyệt như khoảng mục tiêu nội bộ. Kết quả trên khoảng mục tiêu phải được xem xét về nguy cơ quá tải, thời gian chuyển ca, bảo trì và trải nghiệm người học, không mặc nhiên coi càng cao càng tốt.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Chỉ tiêu diện tích theo Chuẩn cơ sở giáo dục đại học được tính bằng diện tích sàn xây dựng phục vụ đào tạo chia cho số người học chính quy quy đổi theo trình độ và lĩnh vực đào tạo. Ngưỡng tối thiểu 2,8 m²/người học quy đổi là điều kiện tuân thủ, không phải bằng chứng duy nhất của hiệu quả sử dụng.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 18,
+            "ten": "Phòng thí nghiệm, studio, xưởng thực hànhvà trang thiết bị dạy học",
+            "chuong": "IV",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Tỷ lệ giờ thực hành hoặc studio thực tế trên giờ khả dụng; tỷ lệ người học được tiếp cận; tỷ lệ hoàn thành bài thực hành, đồ án, mô phỏng hoặc sản phẩm theo kế hoạch.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Mức sử dụng thiết bị theo ca, giờ máy, lượt người hoặc công suất phù hợp; thời gian chờ; tình trạng quá tải, xung đột lịch và tài sản nhàn rỗi.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Kết quả đầu ra phân theo chức năng giảng dạy, nghiên cứu, chuyển giao và phục vụ cộng đồng; chi phí trên giờ thực hành, sản phẩm hoặc kết quả có trọng số.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. An toàn, hướng dẫn vận hành, kiểm định, hiệu chuẩn, bảo trì, vật tư tiêu hao, nhật ký sử dụng và năng lực người vận hành.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Mức hài lòng, khả năng tiếp cận, mức phù hợp với chương trình đào tạo, chuẩn đầu ra, công nghệ nghề nghiệp và nhu cầu tương lai.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 19,
+            "ten": "Công trình, hạ tầng kỹ thuật, năng lượng và môi trường",
+            "chuong": "IV",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Tình trạng công trình và hệ thống kỹ thuật; độ sẵn sàng của điện, nước, chiếu sáng, điều hòa, thông gió, thang máy, phòng cháy, chữa cháy, kiểm soát ra vào và các hệ thống thiết yếu.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tỷ lệ bảo trì phòng ngừa, tồn đọng sửa chữa, thời gian xử lý sự cố, số điểm không phù hợp về an toàn và tỷ lệ khắc phục đúng hạn.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Cường độ điện, nước và chi phí vận hành được tính riêng, chuẩn hóa theo diện tích, số người, giờ hoạt động, công suất, thời tiết, giá và chức năng không gian.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Khả năng tiếp cận của người khuyết tật, sức khỏe, vệ sinh, chất lượng môi trường trong nhà, tiếng ồn, ánh sáng và phản hồi người sử dụng.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Không đặt yêu cầu chi phí bảo trì, điện hoặc nước phải giảm tuyệt đối hằng năm. Việc giảm chi phí chỉ được coi là tích cực khi không làm tăng hỏng hóc, tồn đọng bảo trì, rủi ro hoặc giảm chất lượng dịch vụ.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 20,
+            "ten": "Quản lý vòng đời, điều chuyển và xử lý tài sản",
+            "chuong": "IV",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Tài sản phải được theo dõi từ đề xuất, mua sắm hoặc hình thành, bàn giao, gắn mã, sử dụng, bảo trì, nâng cấp, điều chuyển đến thu hồi, thanh lý hoặc xử lý cuối vòng đời.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tài sản sử dụng thấp phải được phân tích nguyên nhân trước khi điều chuyển hoặc thanh lý, gồm nhu cầu dự phòng, tính mùa vụ, yêu cầu kiểm định, chức năng chiến lược, thiếu đào tạo, lỗi xếp lịch hoặc không phù hợp kỹ thuật.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Thiết bị CNTT, lưu trữ và tài sản có dữ liệu phải xóa dữ liệu an toàn, thu hồi tài khoản, khóa truy cập và có biên bản trước khi điều chuyển, trả nhà cung cấp, thanh lý hoặc tiêu hủy.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Thiết bị điện, điện tử và vật tư nguy hại phải được xử lý theo quy định môi trường; ưu tiên kéo dài vòng đời hợp lý, tái sử dụng, điều chuyển và thu hồi giá trị khi bảo đảm an toàn và hiệu quả.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "V",
+        "stt": 5,
+        "ten": "TIÊU CHÍ HIỆU QUẢ HẠ TẦNG SỐ, CÔNG NGHỆ THÔNG TIN, DỮ LIỆU VÀ TRÍ TUỆ NHÂN TẠO",
+        "dieu": [
+          {
+            "so": 21,
+            "ten": "Phân tầng hệ thống và thỏa thuận mức dịch vụ",
+            "chuong": "V",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Hệ thống số được phân tầng theo mức độ ảnh hưởng:",
+                "diem": [
+                  {
+                    "ky": "a",
+                    "text": "a) Tầng 1 - trọng yếu: mạng lõi, định danh và xác thực, LMS, hệ thống dữ liệu và quản trị cốt lõi, cổng thông tin, sao lưu, an ninh và các hệ thống mà việc gián đoạn ảnh hưởng lớn đến đào tạo hoặc an toàn;"
+                  },
+                  {
+                    "ky": "b",
+                    "text": "b) Tầng 2 - quan trọng: hệ thống phục vụ nhiều đơn vị nhưng có phương án thay thế tạm thời;"
+                  },
+                  {
+                    "ky": "c",
+                    "text": "c) Tầng 3 - hỗ trợ: hệ thống có phạm vi hẹp, ít phụ thuộc và có thể khôi phục trong thời gian dài hơn."
+                  }
+                ]
+              },
+              {
+                "so": 2,
+                "text": "2. Mỗi hệ thống phải có thời gian dịch vụ, thời gian bảo trì, mục tiêu thời gian hoạt động, thời gian phát hiện và khắc phục, mục tiêu thời gian phục hồi (RTO), mục tiêu điểm phục hồi dữ liệu (RPO), dung lượng, hiệu năng, hỗ trợ và đầu mối chịu trách nhiệm.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mục tiêu thời gian hoạt động 99,5% đối với LMS, cổng thông tin hoặc hệ thống cốt lõi là mục tiêu nội bộ tham khảo, chỉ áp dụng khi được phê duyệt và xác định rõ cửa sổ dịch vụ, thời gian bảo trì và cách ghi nhận gián đoạn. Nếu tính liên tục 24 giờ mỗi ngày, mức 99,5% tương đương tối đa khoảng 43 giờ 48 phút gián đoạn trong một năm.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 22,
+            "ten": "Chỉ tiêu vận hành hạ tầng số",
+            "chuong": "V",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Thời gian hoạt động, số và thời lượng gián đoạn, độ trễ, tỷ lệ giao dịch thành công, năng lực tải, mức sử dụng tài nguyên và khả năng mở rộng.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Thời gian phát hiện, phản hồi và khôi phục sự cố; tỷ lệ thực hiện đúng mục tiêu phục hồi và điểm phục hồi dữ liệu.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Tỷ lệ sao lưu thành công, tỷ lệ kiểm thử khôi phục thành công, thời gian khôi phục thực tế và mức hoàn chỉnh của phương án liên tục hoạt động, khắc phục thảm họa.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Chi phí vòng đời, chi phí trên người dùng hoạt động, giao dịch hoặc đơn vị dịch vụ; mức sử dụng giấy phép, tài nguyên đám mây, máy chủ và thiết bị mạng.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Tỷ lệ tài sản, phần mềm hoặc dịch vụ trùng lặp; khả năng tích hợp, liên thông, xuất dữ liệu, chuyển đổi nhà cung cấp và kiểm soát khóa chặt công nghệ.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 23,
+            "ten": "Mức sử dụng phần mềm và hiệu quả quy trình số",
+            "chuong": "V",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Tỷ lệ người dùng hoạt động phải tính trên số người dùng đủ điều kiện hoặc được cấp phép, không tính cơ học trên toàn bộ người học và người lao động nếu họ không thuộc nhóm mục tiêu.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tỷ lệ số hóa phải đo ít nhất: mức cung cấp trực tuyến; tỷ lệ người dùng lựa chọn kênh số; tỷ lệ hoàn thành đầu cuối; thời gian xử lý; tỷ lệ lỗi hoặc phải nộp lại; chi phí trên giao dịch và mức hài lòng.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Mục tiêu 90% thủ tục số hoặc 85% người dùng hoạt động chỉ áp dụng khi được phê duyệt như mục tiêu nội bộ, có định nghĩa rõ thủ tục, người dùng đủ điều kiện, giao dịch thành công và kỳ đo.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Việc sử dụng thấp phải được phân tích theo nhu cầu, trải nghiệm, khả năng tiếp cận, đào tạo, tích hợp, chất lượng dữ liệu và sự tồn tại của hệ thống trùng lặp trước khi kết luận lãng phí.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 24,
+            "ten": "An ninh mạng và bảo vệ dữ liệu cá nhân",
+            "chuong": "V",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Không sử dụng đơn thuần số lượng sự cố làm chỉ tiêu hiệu quả, vì số sự cố thấp có thể do không phát hiện hoặc không báo cáo. Phải phân loại theo mức độ ảnh hưởng và đo thời gian phát hiện, phản hồi, khoanh vùng, khôi phục, nguyên nhân và tái diễn.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Đánh giá tỷ lệ vá lỗ hổng đúng hạn, cấu hình an toàn, xác thực đa yếu tố, rà soát quyền truy cập, thu hồi tài khoản, nhật ký và giám sát, kiểm thử xâm nhập hoặc đánh giá an ninh phù hợp.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đánh giá mức tuân thủ về mục đích xử lý, căn cứ xử lý, thông báo, đồng ý khi cần, quyền của chủ thể dữ liệu, hợp đồng xử lý, đánh giá tác động, chuyển dữ liệu, lưu giữ và xóa dữ liệu.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đánh giá mức hoàn thành đào tạo nhận thức, diễn tập ứng phó, thử nghiệm liên tục hoạt động và tỷ lệ khắc phục phát hiện kiểm tra, kiểm toán đúng hạn.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Mục tiêu không có sự cố nghiêm trọng là mục tiêu quản trị, nhưng không thay thế các chỉ báo về năng lực phòng ngừa, phát hiện, báo cáo, ứng phó và phục hồi.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 25,
+            "ten": "Hệ thống học tập số, dữ liệu học tập và trí tuệ nhân tạo",
+            "chuong": "V",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Bảo đảm định danh, xác thực, phân quyền, ghi nhận đầy đủ dấu vết học tập, kiểm tra, đánh giá và tính toàn vẹn của minh chứng; dữ liệu phải có khả năng truy xuất, kiểm chứng và phục vụ bảo đảm chất lượng, kiểm định.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Đánh giá mức độ liên thông giữa LMS, hệ thống quản lý đào tạo, học liệu số, đánh giá, hồ sơ năng lực và các hệ thống quản trị; hạn chế nhập lại dữ liệu và sai lệch giữa các nguồn.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đối với hệ thống trí tuệ nhân tạo, phải đo chất lượng nhiệm vụ, tỷ lệ lỗi có ảnh hưởng, tỷ lệ cần can thiệp của con người, khả năng giải thích hoặc truy vết phù hợp, mức công khai việc sử dụng AI, chi phí trên nhiệm vụ thành công và cơ chế giám sát của con người.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Không sử dụng tỷ lệ truy cập hoặc số lượt dùng làm bằng chứng duy nhất về hiệu quả học tập. Phải liên kết với mức hoàn thành, tiến bộ năng lực, phản hồi, chất lượng sản phẩm, tính liêm chính học thuật và trải nghiệm người học.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Các hệ thống phải đáp ứng yêu cầu về an toàn, quyền riêng tư, khả năng tiếp cận, kiểm soát gian lận, chất lượng dữ liệu và trách nhiệm giải trình theo quy định pháp luật và Thông tư số 49/2026/TT-BGDĐT kể từ ngày 15 tháng 8 năm 2026.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "VI",
+        "stt": 6,
+        "ten": "QUY TRÌNH ĐÁNH GIÁ",
+        "dieu": [
+          {
+            "so": 26,
+            "ten": "Tổ chức Hội đồng hoặc Tổ đánh giá",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Căn cứ quy mô và tính chất, Hiệu trưởng quyết định thành lập Hội đồng hoặc Tổ đánh giá. Thành phần gồm đại diện Ban Giám hiệu; Phòng Quản lý dự án và Quản trị thiết bị; Phòng Kế hoạch - Tài chính; đơn vị bảo đảm chất lượng; bộ phận CNTT và an ninh mạng; tổ chức - hành chính; pháp chế, kiểm soát hoặc kiểm toán nội bộ nếu có; đơn vị chuyên môn và đại diện người sử dụng.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Đối với dự án hoặc hệ thống chuyên sâu, được mời chuyên gia độc lập, chuyên gia kỹ thuật, an toàn, xây dựng, tài chính, dữ liệu hoặc an ninh mạng.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đơn vị quản lý tài sản chịu trách nhiệm cung cấp và giải trình dữ liệu nhưng không tự xác nhận cuối cùng đối với chỉ tiêu mà mình trực tiếp quản lý. Thành viên có xung đột lợi ích phải công khai và không tham gia biểu quyết nội dung có liên quan.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 27,
+            "ten": "Lập kế hoạch và xác định phạm vi",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Kế hoạch đánh giá phải được phê duyệt trước khi thực hiện và nêu rõ: mục tiêu; danh mục dự án, tài sản hoặc hệ thống; phân loại rủi ro; kỳ dữ liệu; chỉ tiêu, trọng số và ngưỡng; đơn vị cung cấp dữ liệu; phương pháp kiểm tra; kế hoạch lấy mẫu; tiến độ; nguồn lực; sản phẩm và thẩm quyền phê duyệt kết quả.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Đối với dự án mới, chỉ tiêu, giá trị cơ sở, mục tiêu lợi ích và mốc đánh giá sau đầu tư phải được xác lập ngay trong hồ sơ đề xuất hoặc phê duyệt dự án.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 28,
+            "ten": "Thu thập dữ liệu và tự đánh giá",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Đơn vị quản lý và sử dụng thực hiện tự đánh giá theo biểu mẫu, đính kèm minh chứng và xác nhận trách nhiệm về tính đầy đủ, trung thực của dữ liệu.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Phòng Quản lý dự án và Quản trị thiết bị tổng hợp dữ liệu tài sản, công trình, bảo trì và sử dụng; Phòng Kế hoạch - Tài chính xác nhận dữ liệu tài chính, chi phí và nguồn vốn; bộ phận CNTT xác nhận nhật ký hệ thống, mức dịch vụ, an ninh và dữ liệu; đơn vị bảo đảm chất lượng xác nhận phương pháp, khảo sát và bằng chứng kết quả đào tạo, nghiên cứu khi có liên quan.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Khảo sát và phỏng vấn phải xác định đối tượng, phương pháp chọn mẫu, tỷ lệ phản hồi, cách xử lý thiên lệch và bảo vệ danh tính; kết quả cảm nhận không thay thế số liệu vận hành nhưng được dùng để giải thích và đánh giá chất lượng dịch vụ.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 29,
+            "ten": "Kiểm tra, đối soát và lấy mẫu",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Kiểm tra 100% đối với: tài sản mức I; tài sản giá trị lớn theo ngưỡng; tài sản liên quan an toàn, phòng cháy, chữa cháy, an ninh mạng hoặc dữ liệu cá nhân; tài sản không xác định được vị trí; tài sản ngừng sử dụng; dự án có dấu hiệu vượt chi phí, chậm tiến độ, khiếu nại hoặc sự cố nghiêm trọng.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Tài sản mức II và III được lấy mẫu phân tầng theo loại, địa điểm, tuổi đời, giá trị, tình trạng và mức sử dụng. Tỷ lệ ngẫu nhiên 10% - 20% chỉ là lựa chọn đối với nhóm tài sản thông thường, rủi ro thấp sau khi đã thực hiện phân tầng; không phải tỷ lệ cố định và không thay thế kiểm kê bắt buộc.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Kiểm tra có thể gồm quan sát, đối chiếu mã và vị trí, chạy thử, đo tải, kiểm tra tốc độ, nhật ký, quyền truy cập, sao lưu, khôi phục, cấu hình, hồ sơ bảo trì, hiệu chuẩn và phỏng vấn người sử dụng.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 30,
+            "ten": "Phân tích, chấm điểm và lập dự thảo báo cáo",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Thực hiện thống kê mô tả, kiểm tra ngoại lệ, phân tích xu hướng, so sánh với giá trị cơ sở, mục tiêu, chuẩn pháp lý và nhóm tương đồng; chuẩn hóa dữ liệu trước khi so sánh.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Phân tích nguyên nhân gốc đối với kết quả thấp, quá tải, chi phí bất thường, sự cố hoặc không đạt mục tiêu; phân biệt nguyên nhân do nhu cầu, lịch, quy trình, nhân lực, kỹ thuật, nhà cung cấp, dữ liệu hoặc thiết kế đầu tư.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Báo cáo dự thảo phải trình bày dữ liệu, phương pháp, giới hạn, kết quả cổng tuân thủ, điểm thành phần, xếp loại, nguyên nhân và dự kiến hành động. Đơn vị được đánh giá có tối thiểu 07 ngày làm việc để giải trình, cung cấp bổ sung hoặc đề nghị sửa sai dữ liệu, trừ trường hợp khẩn cấp.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 31,
+            "ten": "Phê duyệt báo cáo, hành động khắc phục và đóng kiến nghị",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Báo cáo cuối cùng được trình Hiệu trưởng, Hội đồng trường hoặc cấp có thẩm quyền theo nội dung và mức độ ảnh hưởng. Báo cáo phải tách rõ nội dung để biết, nội dung cần quyết định và nội dung phải khắc phục.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Mỗi hành động phải có đơn vị chủ trì, người chịu trách nhiệm, thời hạn, nguồn lực, kết quả cần đạt, chỉ tiêu xác nhận và rủi ro nếu chậm thực hiện.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Kiến nghị chỉ được đóng khi có bằng chứng hoàn thành và được đơn vị kiểm tra xác nhận. Nội dung quá hạn phải được báo cáo, nêu nguyên nhân và quyết định gia hạn, thay đổi biện pháp hoặc xử lý trách nhiệm.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 32,
+            "ten": "Tần suất đánh giá",
+            "chuong": "VI",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Giám sát liên tục hoặc hằng ngày đối với hệ thống số trọng yếu, an ninh mạng, sao lưu, hạ tầng điện, nước và cảnh báo an toàn khi có hệ thống giám sát.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Báo cáo tháng hoặc quý đối với chỉ tiêu vận hành, chi phí, sự cố, mức sử dụng, bảo trì, số hóa và hành động khắc phục.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Đánh giá theo học kỳ đối với phòng học, studio, phòng thí nghiệm, thiết bị dạy học, LMS và học liệu số.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đánh giá tổng thể hằng năm đối với danh mục tài sản, sức khỏe tài chính và kết quả cải tiến.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Đánh giá dự án theo các giai đoạn quy định tại Điều 11; đánh giá đột xuất khi có dấu hiệu vi phạm, thất thoát, sự cố, thay đổi công nghệ hoặc nhu cầu lớn.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "so": "VII",
+        "stt": 7,
+        "ten": "TRÁCH NHIỆM VÀ TỔ CHỨC THỰC HIỆN",
+        "dieu": [
+          {
+            "so": 33,
+            "ten": "Trách nhiệm của các đơn vị",
+            "chuong": "VII",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Phòng Quản lý dự án và Quản trị thiết bị: là đầu mối lập kế hoạch, quản lý danh mục, hướng dẫn biểu mẫu, kiểm tra thực địa, tổng hợp báo cáo và theo dõi hành động đối với công trình, tài sản và thiết bị; phối hợp nhưng không thay thế trách nhiệm xác nhận chuyên môn của đơn vị khác.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Phòng Kế hoạch - Tài chính: xác nhận nguồn vốn, số liệu kế toán, chi phí, tổng chi phí sở hữu, nghĩa vụ hợp đồng; rà soát tính nhất quán giữa hồ sơ tài sản, dự án và sổ sách.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Bộ phận công nghệ thông tin: quản lý danh mục hệ thống, cấu hình, nhật ký, mức dịch vụ, dung lượng, sao lưu, liên tục hoạt động, an ninh mạng, bản quyền và dữ liệu kỹ thuật; cung cấp bằng chứng có khả năng truy xuất.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Đơn vị bảo đảm chất lượng: rà soát phương pháp, chỉ tiêu, khảo sát, độ tin cậy dữ liệu; liên kết kết quả với Chuẩn cơ sở giáo dục đại học, kiểm định chất lượng và chu trình cải tiến liên tục.",
+                "diem": []
+              },
+              {
+                "so": 5,
+                "text": "5. Đơn vị pháp chế, kiểm soát hoặc kiểm toán nội bộ: kiểm tra tính tuân thủ, xung đột lợi ích, kiểm soát nội bộ và tính độc lập khi được giao hoặc khi dự án, tài sản có mức rủi ro cao.",
+                "diem": []
+              },
+              {
+                "so": 6,
+                "text": "6. Các khoa, phòng, ban, trung tâm và người sử dụng: quản lý, sử dụng đúng mục đích; ghi nhật ký, bảo quản, báo sự cố; cung cấp dữ liệu và thực hiện hành động khắc phục trong phạm vi trách nhiệm.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 34,
+            "ten": "Công khai, lưu trữ và sử dụng kết quả",
+            "chuong": "VII",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Kết quả được sử dụng cho kế hoạch đầu tư, ngân sách, bảo trì, mua sắm, phân bổ không gian, chuyển đổi số, bảo đảm chất lượng, kiểm định, quản trị rủi ro và trách nhiệm giải trình.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Thông tin phải công khai được thực hiện theo quy định pháp luật và quy định của Trường. Không công khai dữ liệu cá nhân, cấu hình an ninh, lỗ hổng, bí mật kinh doanh, giá trị nhạy cảm hoặc thông tin thuộc diện hạn chế tiếp cận.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Hồ sơ đánh giá phải được lưu cùng nguồn dữ liệu, bằng chứng, biên bản kiểm tra, giải trình, quyết định và bằng chứng đóng kiến nghị theo thời hạn lưu trữ áp dụng.",
+                "diem": []
+              }
+            ]
+          },
+          {
+            "so": 35,
+            "ten": "Điều khoản thi hành",
+            "chuong": "VII",
+            "khoan": [
+              {
+                "so": 1,
+                "text": "1. Các phụ lục kèm theo là bộ phận của Quy định này. Trước mỗi kỳ đánh giá, Phòng Quản lý dự án và Quản trị thiết bị phối hợp các đơn vị trình phê duyệt danh mục chỉ tiêu, trọng số, mục tiêu và kế hoạch lấy mẫu cụ thể.",
+                "diem": []
+              },
+              {
+                "so": 2,
+                "text": "2. Trong năm đầu áp dụng, Trường thực hiện thí điểm tối thiểu trên ba nhóm: phòng học/phòng thí nghiệm và thiết bị dạy học; công trình và hạ tầng kỹ thuật; hệ thống CNTT/hạ tầng số. Kết quả thí điểm được dùng để hiệu chỉnh ngưỡng và trọng số trước khi áp dụng toàn diện.",
+                "diem": []
+              },
+              {
+                "so": 3,
+                "text": "3. Các quy định liên quan đến Thông tư số 49/2026/TT-BGDĐT được thực hiện từ ngày 15 tháng 8 năm 2026. Khi văn bản pháp luật hoặc quy định nội bộ được sửa đổi, bổ sung hoặc thay thế, áp dụng văn bản mới và cập nhật biểu mẫu, chỉ tiêu tương ứng.",
+                "diem": []
+              },
+              {
+                "so": 4,
+                "text": "4. Khó khăn, vướng mắc được phản ánh về Phòng Quản lý dự án và Quản trị thiết bị để tổng hợp, phối hợp các đơn vị liên quan báo cáo Hiệu trưởng xem xét, quyết định hoặc trình cấp có thẩm quyền.",
+                "diem": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "phuLuc": [
+    {
+      "so": "I",
+      "stt": 1,
+      "ten": "TỪ ĐIỂN CHỈ TIÊU CỐT LÕI",
+      "ghiChu": [
+        "(Kèm theo Quy định ban hành kèm theo Quyết định số .../QĐ-ĐHKTĐN ngày ... tháng ... năm 2026 của Hiệu trưởng Trường Đại học Kiến trúc Đà Nẵng)",
+        "(Chỉ tiêu và mục tiêu cụ thể được lựa chọn, phê duyệt trước từng kỳ đánh giá; không phải tất cả chỉ tiêu đều áp dụng cho mọi đối tượng)"
+      ],
+      "doan": [],
+      "bang": [
+        {
+          "rows": [
+            [
+              "Mã",
+              "Chỉ tiêu",
+              "Công thức/cách đo",
+              "Nguồn và tần suất",
+              "Cách diễn giải/mục tiêu"
+            ],
+            [
+              "C01",
+              "Hồ sơ pháp lý và quyền quản lý",
+              "Đạt/không đạt theo danh mục hồ sơ áp dụng cho từng loại dự án, tài sản.",
+              "Hồ sơ đầu tư, hợp đồng, sổ tài sản; trước và hằng năm",
+              "Cổng tuân thủ; thiếu hồ sơ trọng yếu: không chấm điểm tổng."
+            ],
+            [
+              "C02",
+              "Xây dựng, phòng cháy, chữa cháy, môi trường, an toàn",
+              "Số điều kiện đạt/Tổng điều kiện phải đáp ứng; kèm mức độ nghiêm trọng của điểm không phù hợp.",
+              "Hồ sơ nghiệm thu, kiểm định, biên bản; theo kỳ pháp luật",
+              "Cổng tuân thủ; vi phạm nghiêm trọng phải khắc phục ngay."
+            ],
+            [
+              "C03",
+              "An ninh mạng và dữ liệu cá nhân",
+              "Đạt/không đạt các kiểm soát bắt buộc, đánh giá tác động và phương án ứng phó áp dụng.",
+              "Hồ sơ an ninh, dữ liệu, nhật ký; quý/năm",
+              "Cổng tuân thủ; không được bù bằng điểm sử dụng."
+            ],
+            [
+              "C04",
+              "Bản quyền, kiểm định, hiệu chuẩn",
+              "Số giấy phép/chứng nhận còn hiệu lực/Tổng số phải có × 100%.",
+              "Danh mục giấy phép, chứng nhận; quý/năm",
+              "Mục tiêu 100% đối với yêu cầu bắt buộc."
+            ],
+            [
+              "F01",
+              "Tỷ lệ bao phủ chi hoạt động",
+              "Thu hoạt động thường xuyên/Chi hoạt động thường xuyên × 100%.",
+              "Kế toán; quý/năm",
+              "Chỉ số sức khỏe tài chính; mục tiêu do cấp có thẩm quyền phê duyệt."
+            ],
+            [
+              "F02",
+              "Tỷ trọng nguồn thu ngoài học phí",
+              "Nguồn thu ngoài học phí đủ điều kiện/Tổng thu hoạt động × 100%.",
+              "Kế toán; năm",
+              "Đánh giá cả tính bền vững, chi phí và rủi ro; không mặc định 15% - 30%."
+            ],
+            [
+              "F03",
+              "Tỷ trọng chi đào tạo, nghiên cứu khoa học và đổi mới sáng tạo",
+              "Chi đủ điều kiện cho đào tạo, nghiên cứu khoa học, đổi mới sáng tạo/Tổng chi × 100%.",
+              "Kế toán; năm",
+              "Chỉ số phân bổ nguồn lực, phải đọc cùng kết quả; không mặc định 60% - 70%."
+            ],
+            [
+              "F04",
+              "Cường độ tái đầu tư",
+              "Chi đầu tư, nâng cấp đủ điều kiện/Tổng chi hoặc doanh thu theo định nghĩa được duyệt × 100%.",
+              "Kế toán, dự án; năm",
+              "Chuẩn hóa theo chu kỳ đầu tư; không mặc định 10% - 15%."
+            ],
+            [
+              "F05",
+              "Chi phí trên người học quy đổi",
+              "Chi phí đào tạo đủ điều kiện/Số người học chính quy quy đổi.",
+              "Kế toán, đào tạo; năm",
+              "So sánh theo trình độ, lĩnh vực, địa điểm và kết quả đầu ra."
+            ],
+            [
+              "I01",
+              "Sai lệch chi phí dự án",
+              "(Chi phí thực tế - Chi phí được duyệt sau điều chỉnh hợp lệ)/Chi phí được duyệt × 100%.",
+              "Kế toán, hợp đồng; tháng/quý/kết thúc",
+              "Phân tích nguyên nhân; thấp hơn không mặc nhiên tốt nếu giảm phạm vi/chất lượng."
+            ],
+            [
+              "I02",
+              "Sai lệch tiến độ",
+              "(Thời gian thực tế - Thời gian kế hoạch sau điều chỉnh hợp lệ)/Thời gian kế hoạch × 100%.",
+              "Kế hoạch dự án; tháng/quý/kết thúc",
+              "Đánh giá tác động đến đào tạo, chi phí và lợi ích."
+            ],
+            [
+              "I03",
+              "Mức hoàn thành phạm vi",
+              "Hạng mục đạt nghiệm thu/Tổng hạng mục được duyệt, có trọng số × 100%.",
+              "Nghiệm thu; kết thúc",
+              "Mục tiêu theo hồ sơ duyệt; hạng mục an toàn là điều kiện bắt buộc."
+            ],
+            [
+              "I04",
+              "Mức sẵn sàng vận hành",
+              "Số điều kiện sẵn sàng đạt/Tổng điều kiện kế hoạch × 100%.",
+              "Bàn giao, đào tạo, bảo trì; kết thúc",
+              "Gồm nhân lực, quy trình, dữ liệu, hỗ trợ, bảo hành, ngân sách vận hành."
+            ],
+            [
+              "I05",
+              "Mức sử dụng so với thiết kế",
+              "Công suất sử dụng thực tế/Công suất thiết kế hoặc kế hoạch × 100%.",
+              "Nhật ký; 6/12/24 tháng",
+              "Đọc cùng nguy cơ quá tải, mùa vụ và chất lượng."
+            ],
+            [
+              "I06",
+              "Tỷ lệ lợi ích thực hiện",
+              "Tổng lợi ích thực tế có trọng số/Tổng lợi ích cam kết có trọng số × 100%.",
+              "Hồ sơ lợi ích; 6/12/24 tháng",
+              "Lợi ích và trọng số phải xác lập trước đầu tư."
+            ],
+            [
+              "I07",
+              "Sai lệch TCO",
+              "(TCO thực tế hoặc cập nhật - TCO kế hoạch)/TCO kế hoạch × 100%.",
+              "Kế toán, hợp đồng; năm",
+              "Gồm giấy phép, nhân lực, năng lượng, bảo trì, nâng cấp và kết thúc."
+            ],
+            [
+              "I08",
+              "Chi phí trên kết quả",
+              "TCO quy đổi hằng năm/Số đơn vị kết quả có trọng số.",
+              "Kế toán, đơn vị chuyên môn; năm",
+              "Dùng cho dự án không có dòng tiền; phải định nghĩa kết quả trước."
+            ],
+            [
+              "I09",
+              "Mức hài lòng bên sử dụng",
+              "Điểm khảo sát chuẩn hóa, kèm tỷ lệ phản hồi và sai số phù hợp.",
+              "Khảo sát; 6/12/24 tháng",
+              "Không dùng đơn độc; phân tích theo nhóm người dùng."
+            ],
+            [
+              "A01",
+              "Độ chính xác sổ tài sản",
+              "Số tài sản khớp mã, vị trí, tình trạng, người quản lý/Tổng tài sản kiểm tra × 100%.",
+              "Sổ tài sản, kiểm tra; quý/năm",
+              "Tài sản trọng yếu, mất dấu: kiểm tra 100%."
+            ],
+            [
+              "A02",
+              "Tỷ lệ sẵn sàng sử dụng",
+              "Thời gian tài sản sẵn sàng/Thời gian yêu cầu sẵn sàng × 100%.",
+              "Nhật ký, bảo trì; tháng/quý",
+              "Loại trừ bảo trì kế hoạch đúng quy định; công bố ngoại lệ."
+            ],
+            [
+              "A03",
+              "Tỷ lệ sử dụng thời gian",
+              "Giờ sử dụng thực tế/Giờ khả dụng × 100%.",
+              "Lịch, nhật ký; học kỳ",
+              "Khoảng 70% - 85% chỉ là mục tiêu nội bộ nếu được duyệt."
+            ],
+            [
+              "A04",
+              "Tỷ lệ lấp đầy chỗ ngồi",
+              "Lượt chỗ ngồi thực tế/Lượt chỗ ngồi khả dụng trong giờ sử dụng × 100%.",
+              "Lịch, điểm danh/cảm biến; học kỳ",
+              "Đánh giá cùng tỷ lệ sử dụng thời gian."
+            ],
+            [
+              "A05",
+              "Diện tích phục vụ đào tạo/người học",
+              "Diện tích sàn xây dựng phục vụ đào tạo/Số người học chính quy quy đổi theo trình độ và lĩnh vực.",
+              "Hồ sơ công trình, đào tạo; năm",
+              "Cổng tuân thủ theo TT01/2024: tối thiểu 2,8 m²/người học quy đổi."
+            ],
+            [
+              "A06",
+              "Giá trị tài sản nhàn rỗi",
+              "Giá trị còn lại của tài sản dưới ngưỡng sử dụng/Tổng giá trị còn lại × 100%.",
+              "Sổ tài sản, nhật ký; quý/năm",
+              "Phân tích lý do dự phòng, mùa vụ, thiếu người vận hành hoặc lỗi thời."
+            ],
+            [
+              "A07",
+              "Chỉ số tình trạng tài sản",
+              "Điểm kiểm tra kết cấu, chức năng, an toàn, độ tin cậy và tuổi đời theo thang được duyệt.",
+              "Kiểm tra kỹ thuật; năm",
+              "Không gộp để che khuất lỗi an toàn."
+            ],
+            [
+              "A08",
+              "Hoàn thành bảo trì phòng ngừa",
+              "Số công việc hoàn thành đúng hạn/Tổng công việc đến hạn × 100%.",
+              "Hệ thống bảo trì; tháng/quý",
+              "Đi kèm chất lượng bảo trì và tỷ lệ tái hỏng."
+            ],
+            [
+              "A09",
+              "Tỷ lệ hỏng ngoài kế hoạch",
+              "Số lần hoặc giờ hỏng ngoài kế hoạch/Đơn vị thời gian vận hành.",
+              "Nhật ký; tháng/quý",
+              "Chuẩn hóa theo giờ hoạt động và loại thiết bị."
+            ],
+            [
+              "A10",
+              "Tồn đọng bảo trì",
+              "Giá trị hoặc số việc bảo trì quá hạn/Tổng kế hoạch bảo trì.",
+              "Bảo trì; tháng/quý",
+              "Không đánh giá chi phí giảm nếu tồn đọng tăng."
+            ],
+            [
+              "A11",
+              "Cường độ điện",
+              "Điện năng tiêu thụ/Diện tích, người dùng hoặc giờ hoạt động phù hợp.",
+              "Công tơ, hóa đơn; tháng/quý",
+              "Chuẩn hóa theo thời tiết, công suất, chức năng và giá."
+            ],
+            [
+              "A12",
+              "Cường độ nước",
+              "Lượng nước tiêu thụ/Diện tích, người dùng hoặc giờ hoạt động phù hợp.",
+              "Đồng hồ, hóa đơn; tháng/quý",
+              "Phân tích rò rỉ, nhu cầu đặc thù và chất lượng dịch vụ."
+            ],
+            [
+              "A13",
+              "Hiệu quả phòng thí nghiệm giảng dạy",
+              "Giờ thực hành hoặc người học hoàn thành/TCO quy đổi hằng năm và công suất khả dụng.",
+              "Lịch, LMS, kế toán; học kỳ/năm",
+              "Đọc cùng an toàn, chất lượng thực hành và chuẩn đầu ra."
+            ],
+            [
+              "A14",
+              "Hiệu quả phòng thí nghiệm nghiên cứu",
+              "Đầu ra nghiên cứu có trọng số và mức đóng góp/TCO quy đổi hằng năm.",
+              "Hồ sơ nghiên cứu khoa học; năm/chu kỳ",
+              "Tính độ trễ và phân bổ đóng góp; không cộng cơ học đầu ra khác loại."
+            ],
+            [
+              "D01",
+              "Thời gian hoạt động hệ thống",
+              "Thời gian cung cấp dịch vụ đáp ứng yêu cầu/Thời gian dịch vụ cam kết × 100%.",
+              "Giám sát; tháng/quý",
+              "Mục tiêu theo tầng và thỏa thuận mức dịch vụ; 99,5% là mục tiêu nội bộ tham khảo."
+            ],
+            [
+              "D02",
+              "Thời gian phát hiện sự cố",
+              "Trung vị và phân vị cao của thời gian từ phát sinh đến phát hiện.",
+              "Hệ thống giám sát; tháng/quý",
+              "Phân theo mức độ nghiêm trọng; càng thấp càng tốt."
+            ],
+            [
+              "D03",
+              "Thời gian khôi phục sự cố",
+              "Trung vị và phân vị cao của thời gian từ phát hiện đến khôi phục dịch vụ.",
+              "Hệ thống yêu cầu hỗ trợ; tháng/quý",
+              "Phân theo tầng hệ thống và mức độ nghiêm trọng."
+            ],
+            [
+              "D04",
+              "Tỷ lệ kiểm thử khôi phục thành công",
+              "Số lần khôi phục đáp ứng mục tiêu/Số lần kiểm thử theo kế hoạch × 100%.",
+              "Biên bản thử; quý/năm",
+              "Không chỉ dựa vào trạng thái sao lưu thành công."
+            ],
+            [
+              "D05",
+              "Tuân thủ mục tiêu phục hồi",
+              "Số sự cố hoặc bài thử đáp ứng RTO và RPO/Tổng số áp dụng × 100%.",
+              "Nhật ký, biên bản; quý/năm",
+              "Mục tiêu theo mức dịch vụ được duyệt."
+            ],
+            [
+              "D06",
+              "Tỷ lệ người dùng hoạt động",
+              "Người dùng đủ điều kiện có hoạt động có ý nghĩa/Người dùng đủ điều kiện × 100%.",
+              "Nhật ký ứng dụng; tháng/học kỳ",
+              "Không dùng tổng nhân sự và người học nếu không cùng phạm vi."
+            ],
+            [
+              "D07",
+              "Hoàn thành quy trình số đầu cuối",
+              "Giao dịch số hoàn thành không cần xử lý lại/Tổng giao dịch thuộc phạm vi × 100%.",
+              "ERP, cổng dịch vụ; tháng/quý",
+              "Tách mức cung cấp trực tuyến, lựa chọn kênh số và hoàn thành."
+            ],
+            [
+              "D08",
+              "Chi phí trên người dùng/giao dịch",
+              "TCO dịch vụ/Số người dùng hoạt động hoặc giao dịch thành công.",
+              "Kế toán, nhật ký; quý/năm",
+              "So sánh theo chất lượng dịch vụ và quy mô."
+            ],
+            [
+              "D09",
+              "Mức sử dụng giấy phép",
+              "Số giấy phép dùng thực tế hoặc đỉnh sử dụng/Số giấy phép mua × 100%.",
+              "Nhật ký cấp phép; tháng/quý",
+              "Nhận diện thiếu, dư và phần mềm trùng lặp."
+            ],
+            [
+              "D10",
+              "Sự cố an ninh có trọng số",
+              "Tổng số sự cố theo mức độ ảnh hưởng, kèm thời gian phát hiện, ứng phó và tái diễn.",
+              "Nhật ký giám sát an ninh; tháng/quý",
+              "Không đặt mục tiêu giảm báo cáo; ưu tiên phát hiện và xử lý đúng."
+            ],
+            [
+              "D11",
+              "Vá lỗ hổng đúng hạn",
+              "Lỗ hổng được khắc phục trong thời hạn quy định/Tổng lỗ hổng đến hạn × 100%.",
+              "Quản lý lỗ hổng; tháng/quý",
+              "Phân theo mức nghiêm trọng và tài sản trọng yếu."
+            ],
+            [
+              "D12",
+              "Kiểm soát truy cập",
+              "Tài khoản thuộc phạm vi có xác thực đa yếu tố, rà soát quyền và thu hồi đúng hạn/Tổng tài khoản áp dụng × 100%.",
+              "Quản lý danh tính, nhân sự; tháng/quý",
+              "Tài khoản đặc quyền và người thôi việc ưu tiên 100%."
+            ],
+            [
+              "D13",
+              "Độ đầy đủ dấu vết học tập",
+              "Số hoạt động, đánh giá và minh chứng bắt buộc có dấu vết hợp lệ/Tổng số bắt buộc × 100%.",
+              "LMS, hệ thống đào tạo; học kỳ",
+              "Phục vụ truy xuất, kiểm định, liêm chính và phân tích học tập."
+            ],
+            [
+              "D14",
+              "Liên thông và khả năng mang chuyển dữ liệu",
+              "Số luồng tích hợp/khả năng xuất dữ liệu đáp ứng chuẩn/Tổng số được phê duyệt × 100%.",
+              "Kiến trúc hệ thống; quý/năm",
+              "Đánh giá khóa chặt nhà cung cấp và khả năng chuyển đổi."
+            ],
+            [
+              "D15",
+              "Hiệu quả hệ thống trí tuệ nhân tạo",
+              "Tỷ lệ nhiệm vụ thành công, lỗi có ảnh hưởng, can thiệp người, chi phí/nhiệm vụ và mức truy vết.",
+              "Nhật ký AI, kiểm thử; tháng/học kỳ",
+              "Phải có giám sát người, công khai phù hợp và kiểm soát dữ liệu."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "so": "II",
+      "stt": 2,
+      "ten": "PHƯƠNG PHÁP CHẤM ĐIỂM VÀ XẾP LOẠI",
+      "ghiChu": [
+        "(Kèm theo Quy định ban hành kèm theo Quyết định số .../QĐ-ĐHKTĐN ngày ... tháng ... năm 2026 của Hiệu trưởng Trường Đại học Kiến trúc Đà Nẵng)"
+      ],
+      "doan": [
+        "1. Điểm tổng hợp",
+        "Điểm tổng hợp = Σ (Điểm chỉ tiêu × Trọng số chỉ tiêu). Tổng trọng số bằng 100%. Chỉ tính khi cổng tuân thủ đạt và dữ liệu trọng yếu đầy đủ. Trọng số phải được phê duyệt trước kỳ đo; không thay đổi sau khi biết kết quả.",
+        "Ghi chú: tỷ trọng cụ thể của từng nhóm do cấp có thẩm quyền phê duyệt trong kế hoạch đánh giá; các kiểm soát pháp lý, an toàn, an ninh mạng và dữ liệu cá nhân vẫn là cổng tuân thủ, không được hạ trọng số để bù trừ."
+      ],
+      "bang": [
+        {
+          "rows": [
+            [
+              "STT",
+              "Loại chỉ tiêu",
+              "Cách tính",
+              "Điều kiện sử dụng"
+            ],
+            [
+              "1",
+              "Chỉ tiêu càng cao càng tốt",
+              "Điểm = min(100; Thực hiện/Mục tiêu × 100).",
+              "Chỉ dùng khi quan hệ tăng là tích cực trong toàn miền đánh giá."
+            ],
+            [
+              "2",
+              "Chỉ tiêu càng thấp càng tốt",
+              "Điểm = min(100; Mục tiêu/Thực hiện × 100).",
+              "Quy định cách xử lý giá trị bằng 0; không dùng cho chỉ tiêu mà giảm quá mức gây rủi ro."
+            ],
+            [
+              "3",
+              "Chỉ tiêu khoảng tối ưu",
+              "Đạt 100 điểm trong khoảng; ngoài khoảng trừ điểm theo biên độ được duyệt.",
+              "Dùng cho mức sử dụng, tải, nhiệt độ hoặc chỉ tiêu có nguy cơ cả thiếu và quá tải."
+            ],
+            [
+              "4",
+              "Chỉ tiêu đạt/không đạt",
+              "100 điểm nếu đạt; 0 điểm nếu không đạt.",
+              "Điều kiện pháp lý nghiêm trọng phải xử lý tại cổng tuân thủ, không chỉ cho 0 điểm."
+            ],
+            [
+              "5",
+              "Chỉ tiêu định tính",
+              "Chấm theo bảng tiêu chí 5 mức có mô tả minh chứng; quy đổi 20/40/60/80/100.",
+              "Mỗi mức phải có mô tả và bằng chứng; tối thiểu hai người đánh giá khi trọng yếu."
+            ]
+          ]
+        },
+        {
+          "rows": [
+            [
+              "Đối tượng",
+              "Nhóm 1",
+              "Nhóm 2",
+              "Nhóm 3",
+              "Nhóm 4",
+              "Nhóm 5"
+            ],
+            [
+              "Dự án đầu tư",
+              "Phù hợp và nhu cầu",
+              "Thực hiện",
+              "Chi phí/TCO",
+              "Lợi ích và kết quả",
+              "Rủi ro, bền vững"
+            ],
+            [
+              "Tài sản/cơ sở vật chất",
+              "Mức sử dụng",
+              "Tình trạng/độ sẵn sàng",
+              "Chi phí vòng đời",
+              "Kết quả/chất lượng",
+              "Người dùng, bền vững"
+            ],
+            [
+              "Hệ thống số",
+              "Sẵn sàng/hiệu năng",
+              "Sử dụng/kết quả",
+              "Chi phí vòng đời",
+              "An ninh/dữ liệu",
+              "Liên thông, khả năng chuyển đổi"
+            ]
+          ]
+        },
+        {
+          "rows": [
+            [
+              "Điểm/trạng thái",
+              "Xếp loại",
+              "Cách xử lý"
+            ],
+            [
+              "90 - 100",
+              "Hiệu quả rất cao",
+              "Đạt cổng tuân thủ; kết quả vượt hoặc đạt đầy đủ mục tiêu; duy trì và nhân rộng có chọn lọc."
+            ],
+            [
+              "80 - dưới 90",
+              "Hiệu quả tốt",
+              "Đạt cổng tuân thủ; còn một số cơ hội tối ưu không trọng yếu."
+            ],
+            [
+              "65 - dưới 80",
+              "Đạt yêu cầu nhưng cần cải thiện",
+              "Có kết quả cơ bản nhưng phải có kế hoạch cải thiện và theo dõi."
+            ],
+            [
+              "50 - dưới 65",
+              "Hiệu quả thấp",
+              "Cần phân tích nguyên nhân, điều chỉnh, điều chuyển hoặc cơ cấu lại."
+            ],
+            [
+              "Dưới 50",
+              "Không hiệu quả",
+              "Xem xét dừng, thay thế, thu hồi, thanh lý hoặc giải pháp khác theo thẩm quyền."
+            ],
+            [
+              "Không tính điểm",
+              "Không đạt cổng tuân thủ",
+              "Khắc phục vi phạm; chỉ chấm lại khi đủ điều kiện."
+            ],
+            [
+              "Không tính điểm",
+              "Chưa đủ minh chứng",
+              "Bổ sung, xác minh dữ liệu; không kết luận hiệu quả khi bằng chứng trọng yếu thiếu."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "so": "III",
+      "stt": 3,
+      "ten": "QUY TRÌNH, TRÁCH NHIỆM VÀ SẢN PHẨM ĐẦU RA",
+      "ghiChu": [
+        "(Kèm theo Quy định ban hành kèm theo Quyết định số .../QĐ-ĐHKTĐN ngày ... tháng ... năm 2026 của Hiệu trưởng Trường Đại học Kiến trúc Đà Nẵng)"
+      ],
+      "doan": [],
+      "bang": [
+        {
+          "rows": [
+            [
+              "Bước",
+              "Công việc",
+              "Chủ trì/phối hợp",
+              "Nội dung chính",
+              "Sản phẩm",
+              "Thời hạn"
+            ],
+            [
+              "1",
+              "Phân loại và lập kế hoạch",
+              "Phòng Quản lý dự án và Quản trị thiết bị chủ trì; các đơn vị phối hợp",
+              "Danh mục, nguồn vốn, rủi ro, kỳ đo, chỉ tiêu, ngưỡng, trọng số, mẫu",
+              "Kế hoạch được phê duyệt",
+              "Trước kỳ đánh giá"
+            ],
+            [
+              "2",
+              "Thiết lập dữ liệu cơ sở",
+              "Tài chính, Phòng Quản lý dự án và Quản trị thiết bị, CNTT, đơn vị bảo đảm chất lượng",
+              "Từ điển dữ liệu, nguồn gốc, chủ sở hữu, giá trị cơ sở, mục tiêu",
+              "Bộ dữ liệu và hồ sơ chỉ tiêu",
+              "Theo kế hoạch"
+            ],
+            [
+              "3",
+              "Tự đánh giá",
+              "Đơn vị quản lý/sử dụng",
+              "Thu thập dữ liệu, giải trình và gắn minh chứng",
+              "Phiếu tự đánh giá",
+              "Theo kế hoạch"
+            ],
+            [
+              "4",
+              "Đối soát và kiểm tra",
+              "Tổ/Hội đồng đánh giá",
+              "Kiểm tra hồ sơ, thực địa, kỹ thuật; lấy mẫu theo rủi ro",
+              "Biên bản và dữ liệu đã xác nhận",
+              "Theo kế hoạch"
+            ],
+            [
+              "5",
+              "Phân tích và chấm điểm",
+              "Tổ thư ký, chuyên gia",
+              "Cổng tuân thủ, chuẩn hóa, so sánh, nguyên nhân, điểm và xếp loại",
+              "Bảng kết quả dự thảo",
+              "Sau xác nhận dữ liệu"
+            ],
+            [
+              "6",
+              "Giải trình",
+              "Đơn vị được đánh giá",
+              "Rà soát dữ liệu, bổ sung minh chứng, phản hồi kết luận",
+              "Văn bản giải trình",
+              "Tối thiểu 07 ngày làm việc"
+            ],
+            [
+              "7",
+              "Phê duyệt báo cáo",
+              "Hiệu trưởng/Hội đồng trường/cấp có thẩm quyền",
+              "Xem xét kết quả và quyết định biện pháp",
+              "Báo cáo và quyết định",
+              "Theo thẩm quyền"
+            ],
+            [
+              "8",
+              "Khắc phục và đóng kiến nghị",
+              "Đơn vị được giao; Phòng Quản lý dự án và Quản trị thiết bị theo dõi",
+              "Thực hiện, đo lại, xác nhận bằng chứng",
+              "Hồ sơ đóng hoặc báo cáo quá hạn",
+              "Theo hạn được duyệt"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "so": "IV",
+      "stt": 4,
+      "ten": "MA TRẬN LẤY MẪU THEO RỦI RO VÀ TRỌNG YẾU",
+      "ghiChu": [
+        "(Kèm theo Quy định ban hành kèm theo Quyết định số .../QĐ-ĐHKTĐN ngày ... tháng ... năm 2026 của Hiệu trưởng Trường Đại học Kiến trúc Đà Nẵng)"
+      ],
+      "doan": [
+        "Ghi chú: tỷ lệ mẫu là mức quản trị tham khảo. Hội đồng đánh giá phải ghi nhận cơ sở chọn mẫu, sai lệch, phần không kiểm tra và ảnh hưởng đến độ tin cậy của kết luận."
+      ],
+      "bang": [
+        {
+          "rows": [
+            [
+              "Mức rủi ro",
+              "Đối tượng điển hình",
+              "Phạm vi gợi ý",
+              "Phương pháp"
+            ],
+            [
+              "Rất cao",
+              "Tài sản/dự án mức I; an toàn, phòng cháy, chữa cháy, an ninh mạng, dữ liệu cá nhân; tài sản mất dấu; sự cố nghiêm trọng; giá trị lớn",
+              "Kiểm tra 100%",
+              "Hồ sơ và thực địa/kỹ thuật; chuyên gia khi cần"
+            ],
+            [
+              "Cao",
+              "Tài sản cũ, hỏng nhiều, sử dụng rất thấp hoặc quá tải; hợp đồng phức tạp; vượt chi phí/chậm tiến độ",
+              "Tối thiểu 50% hoặc 100% theo phán đoán nghề nghiệp",
+              "Phân tầng theo nguyên nhân và địa điểm"
+            ],
+            [
+              "Trung bình",
+              "Tài sản mức II, vận hành tương đối ổn định nhưng có tác động đáng kể",
+              "30% - 50%",
+              "Mẫu phân tầng theo loại, tuổi, giá trị, đơn vị"
+            ],
+            [
+              "Thấp",
+              "Tài sản mức III, giá trị thấp, dễ thay thế, lịch sử ổn định",
+              "10% - 20%",
+              "Có thể ngẫu nhiên sau phân tầng; không thay kiểm kê"
+            ],
+            [
+              "Theo pháp luật/quy chế",
+              "Đối tượng có tần suất kiểm tra, kiểm định, kiểm kê bắt buộc",
+              "Theo đúng yêu cầu bắt buộc",
+              "Quy định nội bộ không được giảm phạm vi"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
