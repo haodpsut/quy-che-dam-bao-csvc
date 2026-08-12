@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { META } from '@/lib/du-lieu'
 
 export default function SiteFooter() {
   return (
@@ -36,11 +35,6 @@ export default function SiteFooter() {
             </ul>
           </div>
         </div>
-        <p className="mt-5 border-t border-white/15 pt-3 text-white/55">
-          Nội dung văn bản trên trang được sinh tự động từ tệp gốc{' '}
-          <code className="text-white/75">{META.nguon.split('/').pop()}</code> và được cổng kiểm số
-          đối chiếu lại với tệp đó mỗi lần dựng trang.
-        </p>
       </div>
     </footer>
   )

@@ -72,7 +72,7 @@ npm run verify:du-lieu # chỉ phần dữ liệu, nhanh, không cần build
 Mỗi cổng đều có ca đối chứng: cố tình làm hỏng dữ liệu rồi xác nhận cổng bắt được, và xác nhận bản
 nguyên vẹn không báo động giả. Một cổng luôn PASS thì vô dụng, và nó trông y hệt một cổng tốt.
 
-Năm lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
+Bảy lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
 
 1. Trích dẫn Điều 10 khoản 4 bị cắt ngắn so với nguyên văn.
 2. Phép phủ ngưỡng ban đầu đếm con số rời khỏi ngữ cảnh: xoá hẳn mục 70% - 85% của Điều 17 mà cổng
@@ -83,6 +83,12 @@ Năm lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
    rạc thay vì chỉ thẳng ra nguyên nhân. Nay mọi lỗi JS và mọi tài nguyên trả 500 đều bị bắt.
 5. Vài phép đo chờ theo đồng hồ (`waitForTimeout`) thay vì chờ theo điều kiện, nên báo lỗi giả khi
    máy chậm. Đã đổi sang `waitFor`.
+6. **Cổng UI đo nhầm phiên bản.** Một `next start` cũ còn giữ cổng 3987; lệnh mới bind thất bại
+   trong im lặng, còn trình duyệt vẫn nhận trang từ máy chủ cũ đang phục vụ bản dựng lỗi thời. Kết
+   quả PASS hay FAIL khi đó đều vô nghĩa. Nay cổng từ chối chạy nếu cổng mạng đã bận, và sau khi
+   khởi động còn đối chiếu tệp CSS mà trang khai báo với tệp có thật trong `.next` của cây mã này.
+7. Đo màu khi CSS chưa được áp: thẻ `.site-header` hiện ra trước khi stylesheet tới, nên chờ "thấy
+   thẻ" rồi đo cho ra màu mặc định của trình duyệt. Nay chờ đúng điều kiện sắp đo.
 
 ## Bản đồ route
 

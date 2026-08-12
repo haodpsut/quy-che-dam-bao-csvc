@@ -15,7 +15,7 @@
  * Chạy: npm run build && node scripts/check-ui.mjs
  */
 import { spawn } from 'node:child_process'
-import { mkdirSync, rmSync } from 'node:fs'
+import { mkdirSync, rmSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import { chromium } from 'playwright'
@@ -63,12 +63,55 @@ async function khungTrongIframe(trang) {
   await trang.locator('iframe').waitFor({ state: 'attached', timeout: 15000 })
   const khung = trang.frames()[1]
   if (!khung) return null
-  await khung.waitForLoadState('domcontentloaded')
+  await khung.waitForLoadState('load')
   await khung.locator('.site-header').waitFor({ state: 'visible', timeout: 15000 })
+
+  /* Chờ tới khi BIỂU KIỂU thật sự được áp, không chỉ tới khi thẻ có mặt.
+     Thẻ .site-header hiện ra ngay cả khi tệp CSS chưa tới, nên chờ "thấy thẻ"
+     rồi đo màu sẽ đọc được màu mặc định của trình duyệt và báo sai nhận diện.
+     Điều kiện chờ là chính thứ sắp đo: dải gold dưới đầu trang.
+     Nếu CSS thật sự không bao giờ tới thì hàm này ném lỗi, và đó là kết quả
+     đúng chứ không phải lỗi giả. */
+  await khung.waitForFunction(
+    () => {
+      const h = document.querySelector('.site-header')
+      if (!h) return false
+      return getComputedStyle(h).borderBottomColor === 'rgb(251, 174, 64)'
+    },
+    { timeout: 15000 },
+  )
   return khung
 }
 
 /* ------------------------------ dựng máy chủ ----------------------------- */
+
+/**
+ * Cổng phải trống trước khi dựng máy chủ riêng.
+ *
+ * Không kiểm việc này là một cái bẫy nguy hiểm: nếu một `next start` cũ còn giữ
+ * cổng, lệnh mới bind thất bại trong im lặng, còn trình duyệt vẫn nhận được
+ * trang từ máy chủ cũ đang phục vụ BẢN DỰNG CŨ. Cổng kiểm khi đó đo một phiên
+ * bản không phải phiên bản vừa dựng, và kết quả PASS hay FAIL đều vô nghĩa.
+ * Đã mất một buổi vì đúng chuyện này.
+ */
+async function congPhaiTrong() {
+  try {
+    const r = await fetch(GOC_URL + '/', { signal: AbortSignal.timeout(1500) })
+    console.error(
+      `FAIL check-ui: cổng ${CONG} đang có tiến trình khác phục vụ (HTTP ${r.status}).\n` +
+        `  Nhiều khả năng là một "next start" cũ chưa tắt. Bản dựng nó phục vụ có thể đã lỗi thời,\n` +
+        `  nên mọi phép đo sau đó sẽ đo nhầm phiên bản.\n` +
+        `  Tắt nó rồi chạy lại. Trên Windows: netstat -ano | findstr :${CONG}  rồi  taskkill /F /PID <pid> /T`,
+    )
+    process.exit(1)
+  } catch (e) {
+    // Không nối được nghĩa là cổng trống, đúng như mong muốn.
+    if (e?.name === 'TimeoutError') {
+      console.error(`FAIL check-ui: cổng ${CONG} có thứ gì đó đang chiếm nhưng không trả lời.`)
+      process.exit(1)
+    }
+  }
+}
 
 function chayServer() {
   return new Promise((ok, hong) => {
@@ -101,7 +144,39 @@ function chayServer() {
 rmSync(anh, { recursive: true, force: true })
 mkdirSync(anh, { recursive: true })
 
+await congPhaiTrong()
 const server = await chayServer()
+
+/* Xác nhận đang nói chuyện với máy chủ VỪA dựng, không phải một máy chủ nào đó.
+   Đối chiếu một chuỗi chỉ có trong bản dựng hiện tại: đường dẫn tệp CSS mà trang
+   chủ khai báo phải trùng với tệp có thật trong .next của cây mã này. */
+{
+  let html = ''
+  try {
+    html = await (await fetch(GOC_URL + '/', { signal: AbortSignal.timeout(8000) })).text()
+  } catch (e) {
+    console.error('FAIL check-ui: máy chủ không trả lời sau khi khởi động —', String(e).split('\n')[0])
+    dietCayTienTrinh(server)
+    process.exit(1)
+  }
+  const css = [...html.matchAll(/\/_next\/(static\/[^"']+\.css)/g)].map((m) => m[1])
+  if (css.length === 0) {
+    console.error('FAIL check-ui: trang chủ không khai báo tệp CSS nào. Bản dựng hỏng.')
+    dietCayTienTrinh(server)
+    process.exit(1)
+  }
+  const thieu = css.filter((c) => !existsSync(resolve(goc, '.next', c)))
+  if (thieu.length) {
+    console.error(
+      'FAIL check-ui: máy chủ đang phục vụ bản dựng KHÁC với .next của cây mã này.\n' +
+        `  Tệp CSS trang khai báo: ${thieu.join(', ')} — không có trên đĩa.\n` +
+        '  Dựng lại bằng "npm run build" rồi chạy lại.',
+    )
+    dietCayTienTrinh(server)
+    process.exit(1)
+  }
+}
+
 const trinhDuyet = await chromium.launch()
 
 try {
