@@ -8,13 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "toanvan": "node scripts/gen-toanvan.mjs",
+    "favicon": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/gen-favicon.mjs",
     "verify:toanvan": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-toanvan.mjs --self-test",
+    "verify:nguon": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-nguon.mjs --self-test",
     "verify:chi-tieu": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-chi-tieu.mjs --self-test",
     "verify:nguong": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-nguong.mjs --self-test",
     "verify:cham-diem": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-cham-diem.mjs",
     "verify:links": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-links.mjs --self-test",
     "verify:ui": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-ui.mjs",
-    "verify:du-lieu": "npm run verify:toanvan && npm run verify:chi-tieu && npm run verify:nguong && npm run verify:cham-diem",
+    "verify:du-lieu": "npm run verify:toanvan && npm run verify:nguon && npm run verify:chi-tieu && npm run verify:nguong && npm run verify:cham-diem",
     "check": "npm run verify:du-lieu && npm run build && npm run verify:links && npm run verify:ui"
   },
   "dependencies": {

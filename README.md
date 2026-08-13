@@ -63,16 +63,17 @@ npm run verify:du-lieu # chỉ phần dữ liệu, nhanh, không cần build
 | Cổng | Kiểm gì | Ca đối chứng |
 |---|---|---|
 | `verify:toanvan` | Bóc lại DOCX ngay lúc chạy và so từng ký tự với JSON đã commit; 7 chương / 35 điều liên tục / khoản liên tục / 47 mã đúng định dạng | 10 ca dương + 1 ca âm |
+| `verify:nguon` | Soát lỗi của **chính văn bản gốc**: chữ dính nhau, khoảng trắng trước dấu câu. Danh sách lỗi đã biết phải khớp chính xác — lỗi mới thì FAIL, lỗi đã sửa ở bản gốc mà còn trong danh sách cũng FAIL | 1 ca dương + 1 ca âm |
 | `verify:chi-tieu` | Overlay phủ đúng tập mã, mọi tham chiếu tồn tại, 4 chỉ tiêu bối cảnh không bị đổi kiểu, chỉ tiêu gắn ngưỡng chưa duyệt bắt buộc có cảnh báo | 11 ca dương + 1 ca âm |
-| `verify:nguong` | **Fail-closed theo từng điều**: mọi tỷ lệ trong thân Quy định phải được một mục nhận cho đúng điều đó; trích dẫn phải có thật trong văn bản | 11 ca dương + 1 ca âm |
+| `verify:nguong` | **Fail-closed theo từng điều**: mọi tỷ lệ trong thân Quy định phải được một mục nhận cho đúng điều đó; trích dẫn phải có thật; **nguồn khai báo phải chứa con số đã khai** | 11 ca dương + 1 ca âm |
 | `verify:cham-diem` | 5 công thức, ca chia 0, trần 100, trừ điểm hai phía, luật cổng chặn, ranh giới xếp loại | 60 phép kiểm |
-| `verify:links` | Chạy trên HTML đã dựng: 1234 liên kết, 185 neo `#dieu-*`, 247 tài nguyên tĩnh. Thêm hai chiều: mọi mục menu phải có route, mọi trang phải có lối vào trong menu | 2 ca dương + 1 ca âm |
+| `verify:links` | Chạy trên HTML đã dựng: 1244 liên kết, 195 neo, 372 tài nguyên. Hai chiều: mọi mục menu phải có route, mọi trang phải có lối vào trong menu. Kiểm cả `favicon.ico` (đủ cỡ 16 và 32) và `apple-icon.png` | 4 ca dương + 2 ca âm |
 | `verify:ui` | Dựng trang thật trong Chromium, chụp ảnh vào `shots/`, đo ở 390px và 1280px; bắt lỗi JS của trang; mở từng menu và kiểm tương phản chữ | 209 phép, gồm 5 phép kiểm núm bấm **tính lại thật** |
 
 Mỗi cổng đều có ca đối chứng: cố tình làm hỏng dữ liệu rồi xác nhận cổng bắt được, và xác nhận bản
 nguyên vẹn không báo động giả. Một cổng luôn PASS thì vô dụng, và nó trông y hệt một cổng tốt.
 
-Bảy lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
+Chín lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
 
 1. Trích dẫn Điều 10 khoản 4 bị cắt ngắn so với nguyên văn.
 2. Phép phủ ngưỡng ban đầu đếm con số rời khỏi ngữ cảnh: xoá hẳn mục 70% - 85% của Điều 17 mà cổng
@@ -89,6 +90,13 @@ Bảy lỗi thật đã bị chính các cổng này bắt trong lúc dựng:
    khởi động còn đối chiếu tệp CSS mà trang khai báo với tệp có thật trong `.next` của cây mã này.
 7. Đo màu khi CSS chưa được áp: thẻ `.site-header` hiện ra trước khi stylesheet tới, nên chờ "thấy
    thẻ" rồi đo cho ra màu mặc định của trình duyệt. Nay chờ đúng điều kiện sắp đo.
+8. **Năm ngưỡng gán sai nguồn.** 100% giấy phép, thang xếp loại 90/80/65/50, tổng trọng số 100%, và
+   hai cỡ mẫu 50% / 30-50% đều được gán cho một Điều mà bản thân Điều đó không chứa con số nào như
+   vậy; con số thật nằm ở Phụ lục I, II và IV. Người đọc bấm vào sẽ không tìm thấy gì. Luật mới:
+   ngưỡng khai nguồn là Điều X thì con số của nó phải có mặt trong chính Điều X, không thì phải khai
+   trường `phuLuc`.
+9. Trang chi tiết chỉ tiêu hiện **hai nhãn trùng chữ** cạnh nhau, vì tên nhóm A và tên lớp đánh giá
+   của nó là cùng một chuỗi. Nhãn nhóm nay chỉ ghi mã nhóm.
 
 ## Bản đồ route
 
@@ -132,8 +140,23 @@ Next.js 16.3 · React 19.2 · Tailwind v4 · dữ liệu tĩnh, chưa có backen
 
 Deploy Vercel: đặt **Root Directory** là `web`.
 
+## Lỗi trong văn bản gốc, cần sửa trước khi ký
+
+Cổng `verify:nguon` soát chính bản DOCX và hiện báo **một lỗi**:
+
+> **Điều 18, tên điều** — "xưởng thực **hànhvà** trang thiết bị dạy học", thiếu một dấu cách.
+> Nên sửa thành "thực hành và".
+
+Web cố ý **giữ nguyên** lỗi này, vì không được tự sửa chữ của văn bản. Sau khi bản gốc được sửa,
+chạy `npm run toanvan` rồi xoá mục tương ứng khỏi `LOI_DA_BIET` trong `scripts/check-nguon.mjs`.
+
 ## Nhận diện
 
 Ba mã màu chính thức của Trường, lấy nguyên từ template slide LaTeX và web quy trình đào tạo, không
 pha màu mới: maroon `#990000`, gold `#fbae40`, navy `#0e2841`. Mặt chữ Noto Sans, cùng mặt chữ với
 slide DAU.
+
+Biểu tượng trang sinh từ `public/dau-logo.png` bằng `npm run favicon`: tệp `.ico` sáu cỡ (16 đến
+256) cộng `apple-icon.png` 180px. Nền maroon chứ không phải nền trắng — đây là kết luận sau khi dựng
+cả ba phương án ra ảnh rồi phóng to nhìn: trên nền trắng, ở 16px các nét của logo trung bình hoá
+thành một vệt hồng nhạt không nhận ra được.

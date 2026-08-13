@@ -25,9 +25,18 @@ export interface Nguong {
   giaTri: string
   apDungCho: string
   trangThai: TrangThaiNguong
-  /** Điều, khoản gốc trong Quy định. */
+  /** Điều, khoản liên quan trong thân Quy định. */
   dieu: number
   khoan?: number
+  /**
+   * Phụ lục chứa con số này, nếu nó nằm ở phụ lục chứ không nằm trong thân điều.
+   *
+   * Có trường này vì lúc đầu năm mục bị gán nhầm cho một điều mà bản thân điều
+   * đó không hề chứa con số: ngưỡng 100% giấy phép nằm ở Phụ lục I, thang xếp
+   * loại và tổng trọng số nằm ở Phụ lục II, hai cỡ mẫu 50% và 30-50% nằm ở Phụ
+   * lục IV. Người đọc bấm vào Điều được chỉ tới sẽ không tìm thấy gì.
+   */
+  phuLuc?: 'I' | 'II' | 'III' | 'IV'
   /** Căn cứ ngoài Quy định, nếu có. */
   canCuNgoai?: string
   /** Ai có thẩm quyền phê duyệt, với ngưỡng chưa duyệt. */
@@ -78,6 +87,7 @@ export const NGUONG: Nguong[] = [
     trangThai: 'phapLy',
     dieu: 6,
     khoan: 3,
+    phuLuc: 'I',
     trichDan: 'Mục tiêu 100% đối với yêu cầu bắt buộc.',
     chiTieu: ['C04'],
   },
@@ -112,6 +122,7 @@ export const NGUONG: Nguong[] = [
     trangThai: 'quyChe',
     dieu: 9,
     khoan: 3,
+    phuLuc: 'II',
     trichDan: 'Kết quả gồm các mức: Hiệu quả rất cao; Hiệu quả tốt; ... (chi tiết ở Phụ lục II)',
     chiTieu: [],
   },
@@ -133,6 +144,7 @@ export const NGUONG: Nguong[] = [
     trangThai: 'quyChe',
     dieu: 9,
     khoan: 1,
+    phuLuc: 'II',
     trichDan:
       'Tổng trọng số bằng 100%. Chỉ tính khi cổng tuân thủ đạt và dữ liệu trọng yếu đầy đủ. (Phụ lục II)',
     chiTieu: [],
@@ -247,10 +259,11 @@ export const NGUONG: Nguong[] = [
   {
     id: 'mau-rui-ro-cao-50',
     giaTri: 'Tối thiểu 50%',
-    apDungCho: 'Cỡ mẫu với nhóm rủi ro cao (Phụ lục IV)',
+    apDungCho: 'Cỡ mẫu với nhóm rủi ro cao',
     trangThai: 'mucTieuChuaDuyet',
     dieu: 29,
     khoan: 2,
+    phuLuc: 'IV',
     thamQuyen: 'Hội đồng đánh giá, theo phán đoán nghề nghiệp',
     trichDan:
       'Ghi chú Phụ lục IV: tỷ lệ mẫu là mức quản trị tham khảo. Hội đồng đánh giá phải ghi nhận cơ sở chọn mẫu, sai lệch, phần không kiểm tra và ảnh hưởng đến độ tin cậy của kết luận.',
@@ -259,10 +272,11 @@ export const NGUONG: Nguong[] = [
   {
     id: 'mau-rui-ro-tb-30-50',
     giaTri: '30% - 50%',
-    apDungCho: 'Cỡ mẫu với nhóm rủi ro trung bình (Phụ lục IV)',
+    apDungCho: 'Cỡ mẫu với nhóm rủi ro trung bình',
     trangThai: 'mucTieuChuaDuyet',
     dieu: 29,
     khoan: 2,
+    phuLuc: 'IV',
     thamQuyen: 'Hội đồng đánh giá, theo phán đoán nghề nghiệp',
     trichDan: 'Ghi chú Phụ lục IV: tỷ lệ mẫu là mức quản trị tham khảo.',
     chiTieu: ['A01'],

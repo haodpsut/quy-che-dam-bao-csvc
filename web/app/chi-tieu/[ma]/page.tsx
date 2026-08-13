@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CHI_TIEU, timChiTieu, timDieu, nguongCuaChiTieu, NHOM_CHI_TIEU, LOP_NHAN } from '@/lib/du-lieu'
 import { KIEU_CHAM_NHAN } from '@/data/chi-tieu'
-import { Trang, Khoi, Muc, NhanTrangThai, LinkDieu, LinkChiTieu, Nhan } from '@/components/ui'
+import { Trang, Khoi, Muc, NhanTrangThai, NguonNguong, LinkDieu, LinkChiTieu, Nhan } from '@/components/ui'
 
 export function generateStaticParams() {
   return CHI_TIEU.map((c) => ({ ma: c.ma.toLowerCase() }))
@@ -40,7 +40,10 @@ export default async function TrangMotChiTieu({ params }: PageProps<'/chi-tieu/[
       canCu={`Phụ lục I, nhóm ${c.nhom}: ${NHOM_CHI_TIEU[c.nhom]}`}
       phu={
         <div className="flex flex-wrap gap-1.5">
-          <Nhan loai="nhom">{NHOM_CHI_TIEU[c.nhom]}</Nhan>
+          {/* Nhãn nhóm chỉ ghi mã nhóm. Ghi cả tên nhóm sẽ trùng chữ với nhãn
+              lớp ngay bên cạnh, vì với nhóm A và D hai tên đó y hệt nhau, và
+              hai nhãn giống nhau nằm cạnh nhau trông như lỗi hiển thị. */}
+          <Nhan loai="nhom">Nhóm {c.nhom}</Nhan>
           {c.lop.map((l) => (
             <Nhan key={l}>{LOP_NHAN[l]}</Nhan>
           ))}
@@ -138,7 +141,7 @@ export default async function TrangMotChiTieu({ params }: PageProps<'/chi-tieu/[
                   </p>
                 )}
                 <p className="mt-1 text-[13px]">
-                  <LinkDieu so={n.dieu} khoan={n.khoan} /> ·{' '}
+                  <NguonNguong dieu={n.dieu} khoan={n.khoan} phuLuc={n.phuLuc} /> ·{' '}
                   <Link href="/nguong" className="text-brand underline underline-offset-2">
                     Xem toàn bộ ngưỡng
                   </Link>

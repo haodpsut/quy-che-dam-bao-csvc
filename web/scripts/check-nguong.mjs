@@ -79,6 +79,15 @@ function rutTyLe(cau) {
   return ra
 }
 
+/**
+ * Rút mọi con số trong chuỗi giá trị, kể cả số không kèm dấu phần trăm
+ * (07 ngày, 2,8 m², mốc 6/12/24 tháng, thang 90/80/65/50 điểm).
+ * Dùng để đối chiếu ngược với nguồn được khai.
+ */
+function rutSo(s) {
+  return [...s.matchAll(/\d+(?:[,.]\d+)?/g)].map((m) => m[0].replace('.', ','))
+}
+
 export function kiem(nguong, overlay, tv) {
   const loi = []
   const E = (m) => loi.push(m)
@@ -129,6 +138,48 @@ export function kiem(nguong, overlay, tv) {
           }"`,
         )
       }
+    }
+  }
+
+  /* --- tầng 1b: nguồn khai báo phải chứa con số đã khai ---
+     Ngưỡng nào nói "tôi ở Điều X" thì con số của nó phải có mặt trong chính
+     Điều X. Không kiểm chiều này thì một mục có thể trỏ sai điều mà vẫn qua hết
+     các phép còn lại, và người đọc bấm vào sẽ không tìm thấy con số ở nơi được
+     chỉ tới. Con số nằm ở phụ lục thì phải khai trường phuLuc, và khi đó đối
+     chiếu với phụ lục đó. */
+  const chuTheoDieu = new Map()
+  for (const c of tv.quyDinh.chuong) {
+    for (const d of c.dieu) {
+      chuTheoDieu.set(
+        d.so,
+        d.khoan.map((k) => k.text + ' ' + k.diem.map((p) => p.text).join(' ')).join(' '),
+      )
+    }
+  }
+  const chuTheoPhuLuc = new Map()
+  for (const p of tv.phuLuc) {
+    chuTheoPhuLuc.set(
+      p.so,
+      [...p.ghiChu, ...p.doan, ...p.bang.flatMap((b) => b.rows.flat())].join(' '),
+    )
+  }
+
+  for (const n of nguong) {
+    const so = rutSo(n.giaTri)
+    if (so.length === 0) continue // ví dụ "Kiểm tra 100%" đã có số, nhưng mục kiểu chữ thì bỏ qua
+
+    const nguonChu = n.phuLuc ? chuTheoPhuLuc.get(n.phuLuc) : chuTheoDieu.get(n.dieu)
+    const tenNguon = n.phuLuc ? `Phụ lục ${n.phuLuc}` : `Điều ${n.dieu}`
+    if (!nguonChu) {
+      E(`Ngưỡng "${n.id}": không tìm thấy ${tenNguon} để đối chiếu`)
+      continue
+    }
+    const thieu = so.filter((s) => !nguonChu.includes(s))
+    if (thieu.length) {
+      E(
+        `Ngưỡng "${n.id}" khai nguồn là ${tenNguon} nhưng ${tenNguon} không chứa con số ${thieu.join(', ')}. ` +
+          `Nếu con số nằm ở phụ lục thì phải khai trường phuLuc.`,
+      )
     }
   }
 

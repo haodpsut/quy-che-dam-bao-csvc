@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { NGUONG, timDieu } from '@/lib/du-lieu'
 import { TRANG_THAI_NHAN, DAN_XUAT, type TrangThaiNguong } from '@/data/nguong'
-import { Trang, Khoi, NhanTrangThai, LinkDieu, LinkChiTieu, TrichDan } from '@/components/ui'
+import { Trang, Khoi, NhanTrangThai, NguonNguong, LinkChiTieu, TrichDan } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Ngưỡng và trạng thái pháp lý',
@@ -78,8 +78,8 @@ export default function TrangNguong() {
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
                         <h3 className="text-[17px] font-bold text-brand">{n.giaTri}</h3>
                         <p className="text-[13px] text-muted">
-                          <LinkDieu so={n.dieu} khoan={n.khoan} />
-                          {d ? ` — ${d.ten}` : ''}
+                          <NguonNguong dieu={n.dieu} khoan={n.khoan} phuLuc={n.phuLuc} />
+                          {d && !n.phuLuc ? ` — ${d.ten}` : ''}
                         </p>
                       </div>
                       <p className="mt-1 text-[14.5px]">{n.apDungCho}</p>

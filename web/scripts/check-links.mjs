@@ -80,17 +80,32 @@ for (const t of trang) {
 
     if (!duong) continue
 
+    // Bỏ phần truy vấn. Next gắn chuỗi băm vào sau tên tệp biểu tượng
+    // ("/favicon.ico?favicon.abc.ico") để ép trình duyệt nạp lại khi tệp đổi.
+    const sach = duong.split('?')[0]
+
     // Tài nguyên tĩnh do Next sinh ra không phải route. Kiểm chúng theo cách
     // khác: file có nằm trên đĩa không. Gộp chung với route sẽ báo động giả
     // hàng loạt và làm người ta tắt luôn cổng này.
-    if (duong.startsWith('/_next/')) {
+    if (sach.startsWith('/_next/')) {
       soTaiNguyen++
-      const tep = resolve(goc, '.next', duong.slice('/_next/'.length))
-      if (!existsSync(tep)) loi.push(`${route}: tài nguyên "${duong}" không có trên đĩa`)
+      const tep = resolve(goc, '.next', sach.slice('/_next/'.length))
+      if (!existsSync(tep)) loi.push(`${route}: tài nguyên "${sach}" không có trên đĩa`)
       continue
     }
 
-    const dich = duong === '/' ? '/' : duong.replace(/\/$/, '')
+    // Tệp có phần mở rộng là tài nguyên, không phải trang. Next phục vụ chúng
+    // từ app/ (biểu tượng) hoặc public/ (ảnh, tệp tải về).
+    if (/\.[a-z0-9]{2,5}$/i.test(sach)) {
+      soTaiNguyen++
+      const ten = sach.slice(1)
+      if (!existsSync(resolve(goc, 'app', ten)) && !existsSync(resolve(goc, 'public', ten))) {
+        loi.push(`${route}: tài nguyên "${sach}" không có trong app/ hay public/`)
+      }
+      continue
+    }
+
+    const dich = sach === '/' ? '/' : sach.replace(/\/$/, '')
     soLink++
 
     if (!coThat.has(dich)) {
@@ -136,6 +151,50 @@ for (const n of NHOM_NAV) {
   }
 }
 
+/* --------------------------- biểu tượng trang --------------------------- */
+
+// Biểu tượng là thứ dễ hỏng trong im lặng nhất: thiếu nó trang vẫn chạy, ảnh
+// chụp vẫn đẹp, chỉ có ô tab hiện một tờ giấy trắng mà không ai để ý.
+{
+  const ico = resolve(goc, 'app/favicon.ico')
+  if (!existsSync(ico)) {
+    loi.push('Thiếu app/favicon.ico. Sinh lại bằng "npm run favicon".')
+  } else {
+    const b = readFileSync(ico)
+    if (b.readUInt16LE(0) !== 0 || b.readUInt16LE(2) !== 1) {
+      loi.push('app/favicon.ico không phải tệp ICO hợp lệ')
+    } else {
+      const n = b.readUInt16LE(4)
+      const co = []
+      for (let i = 0; i < n; i++) {
+        const o = 6 + i * 16
+        co.push(b.readUInt8(o) || 256)
+        const kichThuoc = b.readUInt32LE(o + 8)
+        const viTri = b.readUInt32LE(o + 12)
+        if (viTri + kichThuoc > b.length) {
+          loi.push(`favicon.ico: ảnh thứ ${i + 1} trỏ ra ngoài tệp`)
+        }
+      }
+      // 16 và 32 là hai cỡ trình duyệt thật sự dùng cho ô tab.
+      for (const c of [16, 32]) {
+        if (!co.includes(c)) loi.push(`favicon.ico thiếu cỡ ${c}px, đây là cỡ trình duyệt dùng cho ô tab`)
+      }
+    }
+  }
+  if (!existsSync(resolve(goc, 'app/apple-icon.png'))) {
+    loi.push('Thiếu app/apple-icon.png cho iOS. Sinh lại bằng "npm run favicon".')
+  }
+
+  // Trang phải khai báo biểu tượng, không chỉ có tệp nằm đó.
+  const htmlChu = readFileSync(trang.find((t) => t.route === '/' || t.route === '').duong, 'utf8')
+  if (!/<link[^>]+rel="icon"/.test(htmlChu)) {
+    loi.push('Trang chủ không khai báo <link rel="icon">')
+  }
+  if (!/<link[^>]+rel="apple-touch-icon"/.test(htmlChu)) {
+    loi.push('Trang chủ không khai báo <link rel="apple-touch-icon">')
+  }
+}
+
 /* ------------------------- ca đối chứng dương ------------------------- */
 
 if (process.argv.includes('--self-test')) {
@@ -152,7 +211,32 @@ if (process.argv.includes('--self-test')) {
     console.error('\nFAIL: không dò được id nào dạng "dieu-*" trong /toan-van, phép dò id đang rỗng.')
     process.exit(1)
   }
-  console.log(`  BẮT ĐƯỢC  [đối chứng âm] id có thật "${idThat}" được nhận ra\n`)
+  console.log(`  BẮT ĐƯỢC  [đối chứng âm] id có thật "${idThat}" được nhận ra`)
+
+  // Đối chứng cho phép kiểm biểu tượng: bộ đọc ICO phải đọc ra đúng các cỡ có
+  // thật, và phải từ chối một tệp không phải ICO. Không kiểm việc này thì một
+  // bộ đọc luôn trả về mảng rỗng sẽ làm phép kiểm cỡ 16/32 báo lỗi vĩnh viễn,
+  // còn một bộ đọc luôn trả về [16,32] sẽ không bao giờ bắt được gì.
+  {
+    const b = readFileSync(resolve(goc, 'app/favicon.ico'))
+    const n = b.readUInt16LE(4)
+    const co = []
+    for (let i = 0; i < n; i++) co.push(b.readUInt8(6 + i * 16) || 256)
+    const duCo = co.includes(16) && co.includes(32)
+    console.log(`  ${duCo ? 'BẮT ĐƯỢC' : 'LỌT LƯỚI'}  [đối chứng âm] đọc ra ${n} cỡ từ favicon.ico: ${co.join(', ')}`)
+    if (!duCo) {
+      console.error('\nFAIL: bộ đọc ICO không đọc ra được cỡ 16 và 32, phép kiểm biểu tượng vô nghĩa.')
+      process.exit(1)
+    }
+    const gia = Buffer.from('khong phai ICO')
+    const laIco = gia.length >= 6 && gia.readUInt16LE(0) === 0 && gia.readUInt16LE(2) === 1
+    console.log(`  ${!laIco ? 'BẮT ĐƯỢC' : 'LỌT LƯỚI'}  tệp không phải ICO bị từ chối`)
+    if (laIco) {
+      console.error('\nFAIL: phép nhận dạng ICO chấp nhận cả tệp rác.')
+      process.exit(1)
+    }
+  }
+  console.log('')
 }
 
 /* --------------------------------- kết ---------------------------------- */

@@ -25,7 +25,13 @@ thị trạng thái "chưa phê duyệt" và ghi rõ ai có thẩm quyền.
 `chamTong()` trả về `null` khi chưa qua cổng. Không đổi thành 0, không đổi thành số nào khác. Đây là
 Điều 6 khoản 6 và Điều 9 khoản 1, và `verify:cham-diem` có ca kiểm riêng cho việc này.
 
-## Luật số 5: thêm cổng kiểm thì phải kèm ca đối chứng
+## Luật số 5: không tự sửa lỗi của văn bản gốc
+
+Bản DOCX có lỗi thì báo, không sửa hộ. `scripts/check-nguon.mjs` giữ danh sách lỗi đã biết và bắt
+danh sách đó khớp chính xác: lỗi mới chưa khai báo thì FAIL, lỗi đã sửa ở bản gốc mà còn trong danh
+sách cũng FAIL.
+
+## Luật số 6: thêm cổng kiểm thì phải kèm ca đối chứng
 
 Mỗi cổng cần cả ca dương (cố tình làm hỏng, phải bắt được) và ca âm (bản nguyên vẹn, phải không báo
 lỗi). Một cổng luôn PASS trông y hệt một cổng tốt.
@@ -36,6 +42,8 @@ lỗi). Một cổng luôn PASS trông y hệt một cổng tốt.
 cd web
 npm run verify:du-lieu   # nhanh, không cần build
 npm run check            # đầy đủ, gồm build + liên kết + giao diện
+npm run toanvan          # bóc lại toàn văn sau khi sửa DOCX gốc
+npm run favicon          # sinh lại favicon.ico và apple-icon.png từ logo
 ```
 
 `verify:ui` dựng trang thật trong Chromium và để ảnh ở `web/shots/`. **Mở ảnh ra nhìn**, đừng chỉ

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { NGUONG } from '@/lib/du-lieu'
-import { Trang, Khoi, Muc, LinkDieu, NhanTrangThai } from '@/components/ui'
+import { Trang, Khoi, Muc, LinkDieu, NguonNguong, NhanTrangThai } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Phiếu đề xuất phê duyệt',
@@ -155,7 +155,7 @@ export default function TrangPhieuDeXuat() {
               <tr>
                 <th className="min-w-[120px]">Con số trong văn bản</th>
                 <th className="min-w-[210px]">Áp dụng cho</th>
-                <th className="w-24">Điều</th>
+                <th className="w-28">Nguồn</th>
                 <th className="min-w-[150px]">Thẩm quyền</th>
                 <th className="min-w-[130px]">Mức phê duyệt</th>
                 <th className="min-w-[110px]">Kỳ áp dụng</th>
@@ -172,7 +172,7 @@ export default function TrangPhieuDeXuat() {
                   </td>
                   <td className="text-[13px]">{n.apDungCho}</td>
                   <td className="text-[13px]">
-                    <LinkDieu so={n.dieu} khoan={n.khoan} />
+                    <NguonNguong dieu={n.dieu} khoan={n.khoan} phuLuc={n.phuLuc} />
                   </td>
                   <td className="text-[13px]">{n.thamQuyen}</td>
                   <td className="bg-surface" />

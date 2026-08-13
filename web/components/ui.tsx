@@ -94,6 +94,39 @@ export function LinkDieu({ so, khoan, ten }: { so: number; khoan?: number; ten?:
   )
 }
 
+/**
+ * Nguồn của một ngưỡng, trỏ đúng chỗ con số thật sự nằm.
+ *
+ * Con số của nhiều ngưỡng nằm ở phụ lục chứ không nằm trong thân điều. Chỉ ghi
+ * "Điều 29 khoản 2" cho cỡ mẫu 50% là gửi người đọc tới một điều không hề chứa
+ * con số đó. Khi có phụ lục thì phụ lục đứng trước, điều đứng sau như bối cảnh.
+ */
+export function NguonNguong({
+  dieu,
+  khoan,
+  phuLuc,
+}: {
+  dieu: number
+  khoan?: number
+  phuLuc?: 'I' | 'II' | 'III' | 'IV'
+}) {
+  if (!phuLuc) return <LinkDieu so={dieu} khoan={khoan} />
+  return (
+    <>
+      <Link
+        href={`/toan-van#phu-luc-${phuLuc}`}
+        className="text-brand underline decoration-gold/70 underline-offset-2 hover:decoration-brand"
+      >
+        Phụ lục {phuLuc}
+      </Link>
+      <span className="text-muted">
+        {' '}
+        (liên quan <LinkDieu so={dieu} khoan={khoan} />)
+      </span>
+    </>
+  )
+}
+
 export function LinkChiTieu({ ma, ten }: { ma: string; ten?: string }) {
   return (
     <Link
